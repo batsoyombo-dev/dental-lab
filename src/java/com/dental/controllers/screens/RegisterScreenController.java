@@ -1,4 +1,16 @@
 package com.dental.controllers.screens;
 
-public class RegisterScreenController {
+import com.dental.utils.Navigateable;
+import javafx.fxml.Initializable;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+
+public class RegisterScreenController implements Initializable, Navigateable {
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
+
 }

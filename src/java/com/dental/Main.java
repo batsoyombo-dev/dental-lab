@@ -1,5 +1,6 @@
 package com.dental;
 
+import com.dental.controllers.HomeController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -10,11 +11,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(super.getClass().getResource("/controllers/home_layout.fxml"));
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.setTitle("Dental Lab");
-        stage.show();
+        new HomeController(stage);
     }
 
     public static void main(String[] args) {
