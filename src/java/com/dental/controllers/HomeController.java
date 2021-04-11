@@ -1,9 +1,9 @@
 package com.dental.controllers;
 
+import com.dental.controllers.partials.MenubarController;
 import com.dental.controllers.partials.SidebarController;
 import com.dental.utils.LayoutInflater;
 import com.dental.utils.Navigateable;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -19,8 +19,8 @@ public class HomeController implements Initializable {
 
     public HomeController(Stage stage) throws IOException {
         this.root = (BorderPane) LayoutInflater.inflate(this, super.getClass().getResource("/layout/home_layout.fxml"));
-        this.root.setLeft(LayoutInflater.inflate(new SidebarController(this), super.getClass().getResource("/layout/partials/sidebar_layout.fxml")));
-
+        this.root.setLeft(LayoutInflater.inflate(new SidebarController(this), super.getClass().getResource("/layout/partials/side_bar_partial.fxml")));
+        this.root.setTop(LayoutInflater.inflate(new MenubarController(this), super.getClass().getResource("/layout/partials/menu_bar_partial.fxml")));
         Scene scene = new Scene(this.root);
         stage.setScene(scene);
         stage.setTitle("Dental Lab");

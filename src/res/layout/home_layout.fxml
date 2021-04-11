@@ -6,11 +6,12 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.input.KeyCodeCombination?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml">
 
     <top>
-<!--        Menu Bar   -->
+
     </top>
 
     <left>

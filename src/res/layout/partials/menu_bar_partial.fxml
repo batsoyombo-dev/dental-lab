@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<MenuBar xmlns="http://javafx.com/javafx"
+         xmlns:fx="http://javafx.com/fxml"
+         BorderPane.alignment="CENTER">
+    <Menu text="Doctor">
+        <MenuItem text="Doctor Profile"  onAction="#handleNavigation" id="doctor-profile" />
+        <MenuItem text="Work Type"  onAction="#handleNavigation" id="work-type" />
+    </Menu>
+     <Menu text="Suppliers">
+        <MenuItem text="Suppliers Profile"  onAction="#handleNavigation" id="supplier-profile" />
+    </Menu>
+    <Menu text="Employee">
+        <MenuItem text="Employee Profile" onAction="#handleNavigation" id="employee-profile" />
+    </Menu>
+    <Menu text="Lab Profile">
+        <MenuItem text="Add Lab Profile" onAction="#handleNavigation" id="add-lab-profile" />
+        <MenuItem text="Add User" onAction="#handleNavigation" id="add-user" />
+    </Menu>
+    <Menu text="Records">
+        <MenuItem text="Show Records" onAction="#handleNavigation" id="records" />
+    </Menu>
+    <Menu text="Help">
+        <MenuItem text="About"  onAction="#handleNavigation" id="about" />
+    </Menu>
+</MenuBar>

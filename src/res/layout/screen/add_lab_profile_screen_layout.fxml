@@ -6,12 +6,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx"
+<AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
             prefHeight="400.0" prefWidth="600.0">
-
-    <center>
-        <Button text="Register" onMouseClicked="#handleNavigation" id="register" />
-    </center>
-
-</BorderPane>
+    <Label text="add lab exp" />
+</AnchorPane>
