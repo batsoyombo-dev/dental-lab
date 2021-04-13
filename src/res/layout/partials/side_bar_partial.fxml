@@ -8,7 +8,7 @@
 
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            prefWidth="300.0">
+            prefWidth="300.0" stylesheets="@../../css/partials/side_bar_partial.css, @../../css/global.css">
 
     <center>
         <VBox>

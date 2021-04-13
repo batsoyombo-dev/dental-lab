@@ -8,7 +8,7 @@
 
 <MenuBar xmlns="http://javafx.com/javafx"
          xmlns:fx="http://javafx.com/fxml"
-         BorderPane.alignment="CENTER">
+         BorderPane.alignment="CENTER" stylesheets="@../../css/partials/menu_bar_partial.css, @../../css/global.css">
     <Menu text="Doctor">
         <MenuItem text="Doctor Profile"  onAction="#handleNavigation" id="doctor-profile" />
         <MenuItem text="Work Type"  onAction="#handleNavigation" id="work-type" />

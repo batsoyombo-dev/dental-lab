@@ -8,7 +8,7 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/daily_expenses_screen_layout.css">
+            prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/screens/daily_expenses_screen_layout.css">
 
     <Label text="daily exp" />
 
