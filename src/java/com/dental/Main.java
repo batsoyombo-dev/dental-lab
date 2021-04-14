@@ -15,12 +15,6 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Doctor doctor = new Doctor("1", "dwq", 'f', "2001-01-10", "updated", "dwqdwq", "dwqdwq", "dwqdwq", "dwqdwq", 1.2f);
-        CrudDAO<Doctor> crudDAO = new CrudDAO<>(Doctor.class);
-        if (crudDAO.update(doctor)) {
-            System.out.println("success");
-        }
-
         new HomeController(stage);
     }
 
