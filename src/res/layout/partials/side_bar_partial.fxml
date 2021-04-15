@@ -6,21 +6,53 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            prefWidth="300.0" stylesheets="@../../css/partials/side_bar_partial.css, @../../css/global.css">
+            prefWidth="300.0" stylesheets="@../../css/partials/side_bar_partial.css, @../../css/global.css" styleClass="sidebar-container">
+
+    <top>
+        <VBox styleClass="logo-container">
+            <ImageView>
+                <Image url="@../../images/tooth128.png" />
+            </ImageView>
+        </VBox>
+    </top>
 
     <center>
-        <VBox>
-            <Button text="Register" onMouseClicked="#handleNavigation" id="register" />
-            <Button text="Search Entries" onMouseClicked="#handleNavigation" id="search-entries" />
-            <Button text="Analysis" onMouseClicked="#handleNavigation" id="analysis" />
-            <Button text="Generate Invoice" onMouseClicked="#handleNavigation" id="gen-invoice" />
-            <Button text="Daily Expenses" onMouseClicked="#handleNavigation" id="daily-expenses" />
-            <Button text="Today Delivery" onMouseClicked="#handleNavigation" id="today-delivery" />
-            <Button text="Ledger Account" onMouseClicked="#handleNavigation" id="ledger-account" />
-            <Button text="Exit" onMouseClicked="#handleNavigation" id="exit" />
+        <VBox styleClass="nav-container">
+            <Button text="Register" onMouseClicked="#handleNavigation" id="register" styleClass="btn" />
+            <Button text="Search Entries" onMouseClicked="#handleNavigation" id="search-entries" styleClass="btn" />
+            <Button text="Analysis" onMouseClicked="#handleNavigation" id="analysis" styleClass="btn" />
+            <Button text="Generate Invoice" onMouseClicked="#handleNavigation" id="gen-invoice" styleClass="btn" />
+            <Button text="Daily Expenses" onMouseClicked="#handleNavigation" id="daily-expenses" styleClass="btn" />
+            <Button text="Today Delivery" onMouseClicked="#handleNavigation" id="today-delivery" styleClass="btn" />
+            <Button text="Ledger Account" onMouseClicked="#handleNavigation" id="ledger-account" styleClass="btn" />
+            <Button text="Exit" onMouseClicked="#handleNavigation" id="exit" styleClass="btn" />
         </VBox>
     </center>
 
+    <bottom>
+        <HBox styleClass="btn-container">
+            <VBox maxWidth="Infinity" HBox.hgrow="ALWAYS">
+                <Button styleClass="footer-btn">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@../../images/close.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </VBox>
+            <VBox maxWidth="Infinity" HBox.hgrow="ALWAYS" alignment="CENTER_RIGHT">
+                <Button styleClass="footer-btn">
+                    <graphic>
+                        <ImageView>
+                            <Image url="@../../images/logout.png" />
+                        </ImageView>
+                    </graphic>
+                </Button>
+            </VBox>
+        </HBox>
+    </bottom>
 </BorderPane>

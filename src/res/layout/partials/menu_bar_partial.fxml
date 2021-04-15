@@ -8,20 +8,20 @@
 
 <MenuBar xmlns="http://javafx.com/javafx"
          xmlns:fx="http://javafx.com/fxml"
-         BorderPane.alignment="CENTER" stylesheets="@../../css/partials/menu_bar_partial.css, @../../css/global.css">
+         BorderPane.alignment="CENTER" stylesheets="@../../css/partials/menu_bar_partial.css, @../../css/global.css" styleClass="manubar-container">
     <Menu text="Doctor">
-        <MenuItem text="Doctor Profile"  onAction="#handleNavigation" id="doctor-profile" />
-        <MenuItem text="Work Type"  onAction="#handleNavigation" id="work-type" />
+        <MenuItem text="Doctor Profile"  onAction="#handleNavigation" id="doctor-profile"/>
+        <MenuItem text="Work Type"  onAction="#handleNavigation" id="work-type"/>
     </Menu>
      <Menu text="Suppliers">
-        <MenuItem text="Suppliers Profile"  onAction="#handleNavigation" id="supplier-profile" />
+        <MenuItem text="Suppliers Profile"  onAction="#handleNavigation" id="supplier-profile"/>
     </Menu>
     <Menu text="Employee">
-        <MenuItem text="Employee Profile" onAction="#handleNavigation" id="employee-profile" />
+        <MenuItem text="Employee Profile" onAction="#handleNavigation" id="employee-profile"/>
     </Menu>
     <Menu text="Lab Profile">
-        <MenuItem text="Add Lab Profile" onAction="#handleNavigation" id="add-lab-profile" />
-        <MenuItem text="Add User" onAction="#handleNavigation" id="add-user" />
+        <MenuItem text="Add Lab Profile" onAction="#handleNavigation" id="add-lab-profile"/>
+        <MenuItem text="Add User" onAction="#handleNavigation" id="add-user"/>
     </Menu>
     <Menu text="Records">
         <MenuItem text="Show Records" onAction="#handleNavigation" id="records" />
