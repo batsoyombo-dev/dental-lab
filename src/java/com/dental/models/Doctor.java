@@ -1,5 +1,6 @@
 package com.dental.models;
 
+import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 
@@ -33,7 +34,7 @@ public class Doctor {
     @DatabaseField(canBeNull = false)
     private String email;
 
-    @DatabaseField(canBeNull = false)
+    @DatabaseField(canBeNull = false, dataType = DataType.FLOAT)
     private float balance;
 
     public Doctor() {

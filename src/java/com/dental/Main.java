@@ -2,14 +2,12 @@ package com.dental;
 
 import com.dental.controllers.HomeController;
 import com.dental.dao.CrudDAO;
-import com.dental.dao.DBConnection;
-import com.dental.dao.DoctorDAO;
 import com.dental.models.Doctor;
 import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.stage.Stage;
+
+import java.util.List;
+import java.util.UUID;
 
 public class Main extends Application {
 
