@@ -1,0 +1,55 @@
+.brdEmpProf{
+    -fx-padding: 30px;
+    -fx-max-width: infinity;
+    -fx-background-color: white;
+}
+.topLabel{
+    -fx-padding: 0px 0px 30px 0px;
+    -fx-font-size: 28;
+}
+.hboxEmp{
+    -fx-padding: 30px;
+    -fx-border-width: 1px 0px 0px 0px;
+    -fx-border-color: black;
+}
+
+.gridEmp{
+    -fx-vgap: 20;
+    -fx-hgap: 20;
+}
+.lblEmp{
+    -fx-font-size: 20;
+
+}
+.txtField{
+    -fx-font-size: 20;
+    -fx-border-color: black;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-background-color: none;
+    -fx-pref-height: 40;
+
+}
+.btnContainer{
+}
+.btn{
+    -fx-pref-height: 40;
+    -fx-pref-width: 170;
+    -fx-background-radius: 20;
+    -fx-font-size: 20;
+
+}
+.table{
+
+}
+.mainbtn{
+    -fx-background-color: #6C63FF;
+    -fx-text-fill: white;
+
+}
+.otherbtn{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: black;
+    -fx-border-radius: 20;
+}
