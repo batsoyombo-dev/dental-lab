@@ -12,3 +12,12 @@
     -fx-font-family: Raleway;
     -fx-text-fill: #3d3f56;
 }
+
+.text-field {
+    -fx-font-size: 20;
+    -fx-border-color: black;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-background-color: none;
+    -fx-pref-height: 40;
+}

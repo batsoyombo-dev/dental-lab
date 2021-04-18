@@ -3,6 +3,7 @@ package com.dental;
 import com.dental.controllers.HomeController;
 import com.dental.dao.CrudDAO;
 import com.dental.models.Doctor;
+import com.dental.models.Employee;
 import javafx.application.Application;
 import javafx.stage.Stage;
 

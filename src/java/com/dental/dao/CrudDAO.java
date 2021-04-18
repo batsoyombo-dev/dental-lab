@@ -24,6 +24,7 @@ public class CrudDAO<T> {
             dao.create(object);
             return true;
         } catch(SQLException | IOException e) {
+            e.printStackTrace();
             return false;
         }
     }
