@@ -1,15 +1,91 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.control.SpinnerValueFactory.LocalDateSpinnerValueFactory?>
+<ScrollPane>
+    <content>
+        <BorderPane styleClass="brdDocProf" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+            <stylesheets>
+                <URL value="@../../css/global.css" />
+                <URL value="@../../css/screens/generate_invoice_screen_layout.css" />
+            </stylesheets>
+            <top>
+                <HBox spacing="600" styleClass="borderedBox" >
+                    <Label styleClass="topLabel" text="Generate Invoice" />
+                    <VBox spacing="10" styleClass="header-text">
+                        <Label text="Welcome: Root" />
+                        <Label text="Today: 2021.12.12"/>
+                    </VBox>
+                </HBox>
+            </top>
+            <center>
+                <VBox styleClass="borderedBox" spacing="12">
+                      <Label text="Generate Bills" styleClass="generateBill"/>
+                    <!--        User selection            -->
+                    <HBox styleClass="borderedBox" spacing="12">
+                        <Label text="Select Doctor: "/>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/screens/generate_invoice_screen_layout.css, @../../css/global.css">
+                        <ComboBox value="One">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="Dr Stone"/>
+                                    <String fx:value="Dr PlaceHolder"/>
+                                    <String fx:value="dR Star"/>
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                        <Label text="Year: "/>
+                        <Spinner fx:id="yearSpinner" BorderPane.alignment="CENTER" styleClass=".nothing">
+                            <valueFactory>
+                                <SpinnerValueFactory.IntegerSpinnerValueFactory min="1850" max="2022"/>
+                            </valueFactory>
+                        </Spinner>
+                        <Label text="Month:"/>
+                        <ComboBox styleClass="comboBox">
+                            <items>
+                                <FXCollections fx:factory="observableArrayList">
+                                    <String fx:value="January"/>
+                                    <String fx:value="February"/>
+                                    <String fx:value="April"/>
+                                    <String fx:value="May"/>
+                                    <String fx:value="July"/>
+                                    <String fx:value="August"/>
+                                    <String fx:value="September"/>
+                                    <String fx:value="October"/>
+                                    <String fx:value="November"/>
+                                    <String fx:value="December"/>
+                                </FXCollections>
+                            </items>
+                        </ComboBox>
+                        <Button text="Generate"/>
+                    </HBox>
+                    <TableView styleClass="table" >
+                        <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/></columnResizePolicy>
+                        <columns>
+                            <TableColumn text="Inward No."  />
+                            <TableColumn text="Entry Date" />
+                            <TableColumn text="Patient Name" />
+                            <TableColumn text="Doctor Name"  />
+                            <TableColumn text="Delivery Name" />
+                            <TableColumn text="Total charges" />
+                        </columns>
+                    </TableView>
+                    <HBox spacing="8">
+                        <Button text="Save&amp;Print"/>
+                        <Label text="Total Rows"/>
+                        <TextField/>
+                        <Label text="Total Amount"/>
+                        <TextField/>
+                    </HBox>
+                </VBox>
+            </center>
 
-    <Label text="gen invoi" />
 
-</AnchorPane>
+        </BorderPane>
+    </content>
+</ScrollPane>
