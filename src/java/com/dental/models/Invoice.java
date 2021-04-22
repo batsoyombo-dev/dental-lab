@@ -10,7 +10,7 @@ public class Invoice {
     @DatabaseField(id = true, canBeNull = false, dataType = DataType.STRING)
     private String id;
 
-    @DatabaseField(columnName = "generated_date", canBeNull = false, dataType = DataType.STRING)
+    @DatabaseField(columnName = "generated_date", canBeNull = false, dataType = DataType.DATE)
     private String generatedDate;
 
     @DatabaseField(columnName = "registration_id", canBeNull = false, foreign = true)
@@ -50,4 +50,12 @@ public class Invoice {
         this.registration = registration;
     }
 
+    @Override
+    public String toString() {
+        return "Invoice{" +
+                "id='" + id + '\'' +
+                ", generatedDate='" + generatedDate + '\'' +
+                ", registration=" + registration +
+                '}';
+    }
 }

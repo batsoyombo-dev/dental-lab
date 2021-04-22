@@ -10,11 +10,11 @@ public class Expenses {
     @DatabaseField(id = true, canBeNull = false, dataType = DataType.STRING)
     private String id;
 
-    @DatabaseField(canBeNull = false, dataType = DataType.DATE_STRING)
+    @DatabaseField(canBeNull = false, dataType = DataType.DATE)
     private String date;
 
     @DatabaseField(canBeNull = false, dataType = DataType.FLOAT)
-    private float name;
+    private float amount;
 
     @DatabaseField(columnName = "payment_method", canBeNull = false, dataType = DataType.STRING)
     private String paymentMethod;
@@ -28,10 +28,10 @@ public class Expenses {
     @DatabaseField(columnName = "paid_to", canBeNull = false, dataType = DataType.STRING)
     private String paidTo;
 
-    public Expenses(String id, String date, float name, String paymentMethod, String description, String comment, String paidTo) {
+    public Expenses(String id, String date, float amount, String paymentMethod, String description, String comment, String paidTo) {
         this.id = id;
         this.date = date;
-        this.name = name;
+        this.amount = amount;
         this.paymentMethod = paymentMethod;
         this.description = description;
         this.comment = comment;
@@ -59,11 +59,11 @@ public class Expenses {
     }
 
     public float getName() {
-        return name;
+        return amount;
     }
 
-    public void setName(float name) {
-        this.name = name;
+    public void setName(float amount) {
+        this.amount = amount;
     }
 
     public String getPaymentMethod() {
@@ -98,4 +98,16 @@ public class Expenses {
         this.paidTo = paidTo;
     }
 
+    @Override
+    public String toString() {
+        return "Expenses{" +
+                "id='" + id + '\'' +
+                ", date='" + date + '\'' +
+                ", amount=" + amount +
+                ", paymentMethod='" + paymentMethod + '\'' +
+                ", description='" + description + '\'' +
+                ", comment='" + comment + '\'' +
+                ", paidTo='" + paidTo + '\'' +
+                '}';
+    }
 }

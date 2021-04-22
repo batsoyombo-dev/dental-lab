@@ -109,4 +109,18 @@ public class Lab {
     public void setPan(String pan) {
         this.pan = pan;
     }
+
+    @Override
+    public String toString() {
+        return "Lab{" +
+                "id='" + id + '\'' +
+                ", address='" + address + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", mobileNumber='" + mobileNumber + '\'' +
+                ", email='" + email + '\'' +
+                ", vatTin='" + vatTin + '\'' +
+                ", cstNumber='" + cstNumber + '\'' +
+                ", pan='" + pan + '\'' +
+                '}';
+    }
 }

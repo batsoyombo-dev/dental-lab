@@ -13,13 +13,13 @@ public class Registration {
     @DatabaseField(columnName = "patient_name", canBeNull = false, dataType = DataType.STRING)
     private String patientName;
 
-    @DatabaseField(canBeNull = false, dataType = DataType.DATE_STRING)
+    @DatabaseField(canBeNull = false, dataType = DataType.DATE)
     private String date;
 
-    @DatabaseField(columnName = "trial_date", canBeNull = false, dataType = DataType.STRING)
+    @DatabaseField(columnName = "trial_date", canBeNull = false, dataType = DataType.DATE)
     private String trialDate;
 
-    @DatabaseField(columnName = "finished_date", canBeNull = false, dataType = DataType.STRING)
+    @DatabaseField(columnName = "finished_date", canBeNull = false, dataType = DataType.DATE)
     private String finishedDate;
 
     @DatabaseField(canBeNull = false, dataType = DataType.FLOAT)
@@ -110,4 +110,17 @@ public class Registration {
         this.workType = workType;
     }
 
+    @Override
+    public String toString() {
+        return "Registration{" +
+                "id='" + id + '\'' +
+                ", patientName='" + patientName + '\'' +
+                ", date='" + date + '\'' +
+                ", trialDate='" + trialDate + '\'' +
+                ", finishedDate='" + finishedDate + '\'' +
+                ", charges=" + charges +
+                ", doctor=" + doctor +
+                ", workType=" + workType +
+                '}';
+    }
 }

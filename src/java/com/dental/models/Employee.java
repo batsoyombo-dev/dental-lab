@@ -16,7 +16,7 @@ public class Employee {
     @DatabaseField(canBeNull = false, dataType = DataType.CHAR)
     private char gender;
 
-    @DatabaseField(canBeNull = false, dataType = DataType.DATE_STRING)
+    @DatabaseField(canBeNull = false, dataType = DataType.DATE)
     private String dob;
 
     @DatabaseField(columnName = "address", canBeNull = false, dataType = DataType.STRING)
@@ -31,7 +31,7 @@ public class Employee {
     @DatabaseField(canBeNull = false, dataType = DataType.STRING)
     private String email;
 
-    @DatabaseField(canBeNull = false, dataType = DataType.INTEGER)
+    @DatabaseField(columnName = "salary_month", canBeNull = false, dataType = DataType.INTEGER)
     private int salaryMonth;
 
     public Employee(String id, String name, char gender, String dob, String address, String designation, String mobileNumber, String email, int salaryMonth) {
@@ -120,6 +120,21 @@ public class Employee {
 
     public void setSalaryMonth(int salaryMonth) {
         this.salaryMonth = salaryMonth;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", gender=" + gender +
+                ", dob=" + dob +
+                ", address='" + address + '\'' +
+                ", designation='" + designation + '\'' +
+                ", mobileNumber='" + mobileNumber + '\'' +
+                ", email='" + email + '\'' +
+                ", salaryMonth=" + salaryMonth +
+                '}';
     }
 
 }
