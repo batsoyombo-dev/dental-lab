@@ -10,7 +10,7 @@ public class Expenses {
     @DatabaseField(id = true, canBeNull = false, dataType = DataType.STRING)
     private String id;
 
-    @DatabaseField(canBeNull = false, dataType = DataType.DATE)
+    @DatabaseField(canBeNull = false)
     private String date;
 
     @DatabaseField(canBeNull = false, dataType = DataType.FLOAT)

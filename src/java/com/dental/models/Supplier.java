@@ -16,7 +16,7 @@ public class Supplier {
     @DatabaseField(canBeNull = false, dataType = DataType.CHAR)
     private char gender;
 
-    @DatabaseField(canBeNull = false, dataType = DataType.DATE)
+    @DatabaseField(canBeNull = false)
     private String dob;
 
     @DatabaseField(columnName = "address", canBeNull = false, dataType = DataType.STRING)
