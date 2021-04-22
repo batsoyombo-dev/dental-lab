@@ -1,0 +1,92 @@
+.topLabel{
+    -fx-padding: 0px 0px 30px 0px;
+    -fx-font-size: 28;
+}
+.choiceBoxStyle
+{
+    -fx-font-size: 20;
+    -fx-border-color: black;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-background-color: none;
+    -fx-pref-height: 10;
+}
+.lblSupp{
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+
+}
+.BorderStyle{
+    -fx-padding: 30px;
+    -fx-max-width: infinity;
+    -fx-background-color: white;
+}
+.otherbtn
+{
+    -fx-pref-height: 40;
+    -fx-pref-width: 100;
+    -fx-background-radius: 20;
+    -fx-font-size: 20;
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: black;
+    -fx-border-radius: 20;
+}
+.otherbtn1
+{
+    -fx-pref-height: 40;
+    -fx-pref-width: 35;
+    -fx-background-radius: 20;
+    -fx-font-size: 12;
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: black;
+    -fx-border-radius: 20;
+}
+
+.btn
+{
+    -fx-background-radius: 5em;
+    -fx-min-width: 3px;
+    -fx-min-height: 3px;
+    -fx-pref-width: 40px;
+    -fx-pref-height: 30px;
+    -fx-max-width: 100px;
+    -fx-max-height: 40px;
+    -fx-background-color: white;
+    -fx-font-size: 13;
+    -fx-border-color: black;
+    -fx-border-radius: 20;
+}
+.btn1
+{
+    -fx-background-radius: 5em;
+    -fx-min-width: 3px;
+    -fx-min-height: 3px;
+    -fx-max-width: 100px;
+    -fx-max-height: 40px;
+    -fx-pref-width: 77px;
+    -fx-pref-height: 60px;
+    -fx-background-color: white;
+    -fx-font-size: 18;
+    -fx-border-color: black;
+    -fx-border-radius: 20;
+
+}
+.mainbtn{
+    -fx-background-color: #6C63FF;
+    -fx-text-fill: white;
+}
+
+.bodyBorder
+{
+    -fx-padding: 30px;
+    -fx-border-width: 1px 0px 0px 0px;
+    -fx-border-color: black;
+    -fx-vgap: 20;
+    -fx-hgap: 20;
+}
+DatePicker
+{
+    -fx-background-color: white;
+}

@@ -1,9 +1,11 @@
-@font-face {
+@font-face
+{
     font-family: Raleway;
     src: url("../fonts/Raleway-Regular.ttf");
 }
 
-@font-face {
+@font-face
+{
     font-family: Raleway-Bold;
     src: url("../fonts/Raleway-SemiBold.ttf");
 }
@@ -13,7 +15,8 @@
     -fx-text-fill: #3d3f56;
 }
 
-.text-field {
+.text-field
+{
     -fx-font-size: 20;
     -fx-border-color: black;
     -fx-background-radius: 20px;

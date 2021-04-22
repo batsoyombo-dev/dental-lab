@@ -1,15 +1,208 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/screens/register_screen_layout.css, @../../css/global.css">
-
-    <Label text="Hello" />
-
-</VBox>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1000.0" styleClass="BorderStyle" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <Label prefHeight="31.0" prefWidth="164.0" styleClass="topLabel" text="Register">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </Label>
+   </top>
+   <center>
+      <AnchorPane prefHeight="689.0" prefWidth="952.0" styleClass="bodyBorder" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="14.0" layoutY="30.0" prefHeight="46.0" prefWidth="234.0" spacing="20.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" prefHeight="34.0" prefWidth="136.0" styleClass="lblSupp" text="Inward No.:" />
+                  <TextField maxHeight="40.0" prefHeight="23.0" prefWidth="118.0" styleClass="text-field1" />
+               </children>
+            </HBox>
+            <HBox layoutX="264.0" layoutY="30.0" prefHeight="46.0" prefWidth="234.0" spacing="20.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" prefHeight="34.0" prefWidth="136.0" styleClass="lblSupp" text="Inward No:" />
+                  <TextField maxHeight="10.0" prefHeight="23.0" prefWidth="133.0" styleClass="text-field1" />
+               </children>
+            </HBox>
+            <HBox layoutX="667.0" layoutY="30.0" prefHeight="46.0" prefWidth="252.0" spacing="20.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" prefHeight="34.0" prefWidth="136.0" styleClass="lblSupp" text="Date:" />
+                  <DatePicker prefHeight="40.0" prefWidth="272.0" />
+               </children>
+            </HBox>
+            <HBox layoutX="14.0" layoutY="101.0" prefHeight="43.0" prefWidth="469.0" spacing="20.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" prefHeight="34.0" prefWidth="130.0" styleClass="lblSupp" text="Doctor:" />
+                  <ChoiceBox prefWidth="344.0" styleClass="choiceBoxStyle" />
+               </children>
+            </HBox>
+            <HBox layoutX="500.0" layoutY="101.0" prefHeight="46.0" prefWidth="445.0" spacing="20.0">
+               <children>
+                  <Label alignment="BOTTOM_LEFT" prefHeight="34.0" prefWidth="130.0" styleClass="lblSupp" text="Patient Name:" />
+                  <TextField prefWidth="283.0" />
+               </children>
+            </HBox>
+            <StackPane layoutX="14.0" layoutY="180.0" prefHeight="279.0" prefWidth="932.0" style="-fx-border-color: black; -fx-border-radius: 20;">
+               <children>
+                  <AnchorPane prefHeight="304.0" prefWidth="922.0">
+                     <children>
+                        <VBox layoutY="14.0" prefHeight="90.0" prefWidth="929.0" spacing="15.0">
+                           <children>
+                              <HBox prefHeight="46.0" prefWidth="445.0" spacing="20.0">
+                                 <children>
+                                    <Label alignment="BOTTOM_LEFT" prefHeight="34.0" prefWidth="118.0" styleClass="lblSupp" text="Work Type">
+                                       <padding>
+                                          <Insets left="10.0" />
+                                       </padding>
+                                    </Label>
+                                    <ChoiceBox prefWidth="209.0" styleClass="choiceBoxStyle" />
+                                 </children>
+                              </HBox>
+                              <Label styleClass="lblSupp" text="Region">
+                                 <VBox.margin>
+                                    <Insets left="10.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                        <VBox layoutY="113.0" prefHeight="147.0" prefWidth="925.0" spacing="20.0">
+                           <children>
+                              <HBox prefHeight="55.0" prefWidth="908.0" spacing="15.0">
+                                 <children>
+                                    <Button maxHeight="59.0" maxWidth="49.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="77.0" styleClass="btn1" text="U">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="39.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="39.0" styleClass="btn" text="8" />
+                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="7" />
+                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="6" />
+                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="5" />
+                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" text="4">
+                                       <styleClass>
+                                          <String fx:value="btn" />
+                                          <String fx:value="mainbtn" />
+                                       </styleClass>
+                                    </Button>
+                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="3" />
+                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="2" />
+                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="1" />
+                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="1" />
+                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="2" />
+                                    <Button layoutX="76.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" text="3">
+                                       <styleClass>
+                                          <String fx:value="btn" />
+                                          <String fx:value="mainbtn" />
+                                       </styleClass>
+                                    </Button>
+                                    <Button layoutX="132.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="4" />
+                                    <Button layoutX="160.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="5" />
+                                    <Button layoutX="188.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="6" />
+                                    <Button layoutX="188.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="7" />
+                                    <Button layoutX="216.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="8" />
+                                 </children>
+                              </HBox>
+                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="55.0" prefWidth="908.0" spacing="15.0">
+                                 <children>
+                                    <Button maxHeight="59.0" maxWidth="49.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="77.0" styleClass="btn1" text="L">
+                                       <HBox.margin>
+                                          <Insets left="10.0" />
+                                       </HBox.margin>
+                                    </Button>
+                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="39.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="39.0" styleClass="btn" text="8" />
+                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" text="7">
+                                       <styleClass>
+                                          <String fx:value="btn" />
+                                          <String fx:value="mainbtn" />
+                                       </styleClass>
+                                    </Button>
+                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="6" />
+                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="5" />
+                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="4" />
+                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="3" />
+                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="2" />
+                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="1" />
+                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="1" />
+                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="2" />
+                                    <Button layoutX="76.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="3" />
+                                    <Button layoutX="132.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="4" />
+                                    <Button layoutX="160.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="5" />
+                                    <Button layoutX="188.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="6" />
+                                    <Button layoutX="188.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="7" />
+                                    <Button layoutX="216.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="8" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                        <Label style="-fx-background-color: white;" styleClass="lblSupp" text="Teeth Selection" translateX="30.0" translateY="-15.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </StackPane>
+            <VBox layoutX="383.0" layoutY="480.0" prefHeight="116.0" prefWidth="284.0" spacing="20.0">
+               <children>
+                  <HBox prefHeight="46.0" prefWidth="234.0" spacing="20.0">
+                     <children>
+                        <Label alignment="BOTTOM_LEFT" prefHeight="34.0" prefWidth="136.0" styleClass="lblSupp" text="Extra charges:" />
+                        <TextField maxHeight="40.0" prefHeight="23.0" prefWidth="118.0" styleClass="text-field1" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="234.0" spacing="20.0">
+                     <children>
+                        <Label alignment="BOTTOM_LEFT" prefHeight="34.0" prefWidth="136.0" styleClass="lblSupp" text="Total Charges:" />
+                        <TextField maxHeight="40.0" prefHeight="23.0" prefWidth="118.0" styleClass="text-field1" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox layoutX="14.0" layoutY="487.0" prefHeight="123.0" prefWidth="336.0" spacing="20.0">
+               <children>
+                  <HBox prefHeight="41.0" prefWidth="303.0" spacing="20.0">
+                     <children>
+                        <Label alignment="BOTTOM_LEFT" prefHeight="34.0" prefWidth="152.0" styleClass="lblSupp" text="Trial date " />
+                        <DatePicker prefHeight="40.0" prefWidth="217.0" />
+                     </children>
+                  </HBox>
+                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="41.0" prefWidth="303.0" spacing="20.0">
+                     <children>
+                        <Label alignment="BOTTOM_LEFT" prefHeight="34.0" prefWidth="164.0" styleClass="lblSupp" text="Finished date" />
+                        <DatePicker prefHeight="40.0" prefWidth="225.0" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox layoutX="14.0" layoutY="610.0" prefHeight="52.0" prefWidth="283.0" spacing="20.0">
+               <children>
+                  <Button mnemonicParsing="false" text="New Entry">
+                     <styleClass>
+                        <String fx:value="btn2" />
+                        <String fx:value="mainbtn" />
+                     </styleClass>
+                  </Button>
+                  <Button mnemonicParsing="false" styleClass="otherbtn" text="cancel" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </center>
+   <stylesheets>
+      <URL value="@../../css/screens/register_screen_layout.css" />
+      <URL value="@../../css/global.css" />
+   </stylesheets>
+</BorderPane>
