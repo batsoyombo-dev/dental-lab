@@ -23,11 +23,11 @@
                 </HBox>
             </top>
             <center>
-                <VBox>
+                <VBox spacing="10">
 
 
                <HBox spacing="20" prefWidth="900" styleClass="borderedBox">
-                   <LegendBorder labelBackgroundColor="#6c63ff" labelTitle="Make Expenses">
+                   <LegendBorder labelBackgroundColor="#fff" labelTitle="Make Expenses">
                        <VBox>
 
                            <HBox >
@@ -58,7 +58,7 @@
                        </VBox>
 
                    </LegendBorder>
-                   <LegendBorder labelBackgroundColor="#6c63ff" labelTitle="Search Expenses">
+                   <LegendBorder labelBackgroundColor="#fff" labelTitle="Search Expenses">
                        <VBox spacing="10">
                            <HBox spacing="8.0" >
                                <Label text="From:" prefWidth="70" minWidth="70" maxWidth="70"/>
