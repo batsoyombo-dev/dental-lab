@@ -13,13 +13,13 @@ public class Registration {
     @DatabaseField(columnName = "patient_name", canBeNull = false, dataType = DataType.STRING)
     private String patientName;
 
-    @DatabaseField(canBeNull = false, dataType = DataType.DATE)
+    @DatabaseField(canBeNull = false)
     private String date;
 
-    @DatabaseField(columnName = "trial_date", canBeNull = false, dataType = DataType.DATE)
+    @DatabaseField(columnName = "trial_date", canBeNull = false)
     private String trialDate;
 
-    @DatabaseField(columnName = "finished_date", canBeNull = false, dataType = DataType.DATE)
+    @DatabaseField(columnName = "finished_date", canBeNull = false)
     private String finishedDate;
 
     @DatabaseField(canBeNull = false, dataType = DataType.FLOAT)

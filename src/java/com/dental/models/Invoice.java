@@ -10,7 +10,7 @@ public class Invoice {
     @DatabaseField(id = true, canBeNull = false, dataType = DataType.STRING)
     private String id;
 
-    @DatabaseField(columnName = "generated_date", canBeNull = false, dataType = DataType.DATE)
+    @DatabaseField(columnName = "generated_date", canBeNull = false)
     private String generatedDate;
 
     @DatabaseField(columnName = "registration_id", canBeNull = false, foreign = true)
