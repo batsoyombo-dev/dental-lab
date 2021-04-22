@@ -18,6 +18,9 @@ public class CrudDAO<T> {
         this.cl = cl;
     }
 
+    /**
+     * @return Tuhain <T> model - d hamaarah ogogdoliin sangiin husnegtnees buh ogogdoliig avna
+     * */
     public List<T> list() {
         try (ConnectionSource con = DBConnection.getConnectionSource();) {
             Dao<T, String> dao = DaoManager.createDao(con, this.cl);
@@ -28,6 +31,10 @@ public class CrudDAO<T> {
         }
     }
 
+    /**
+     * @param object <T> modeliin buyu husnegtend nemeh shine object iig parameteraar avna
+     * @return hervee amjilttai husnegt luu insert hiisen tohioldold true - g butsaan amjiltgu bol false - g butsaan
+     * */
     public boolean create(T object) {
         try (ConnectionSource con = DBConnection.getConnectionSource();) {
             Dao<T, String> dao = DaoManager.createDao(con, this.cl);
@@ -39,6 +46,11 @@ public class CrudDAO<T> {
         }
     }
 
+    /**
+     * @param <E> Tuhain modeliin primary key - iin data type
+     * @param pk Tuhain husnegteed avah gej bui mor bichlegiin primary key
+     * @return parametreer avsan PK(ID) - tei mor bichlegiig <E> torliin object bolgon butsaan
+     * */
     public <E> T retrieve(E pk) {
         try (ConnectionSource con = DBConnection.getConnectionSource();) {
             Dao<T, E> dao = DaoManager.createDao(con, this.cl);
@@ -48,6 +60,11 @@ public class CrudDAO<T> {
         }
     }
 
+    /**
+     * @param object Oorchlogdson objectiig ogj yvuulna. Ene object ni
+     *               huuchin update hiihees omno bsn PK(ID) ni adil bh yostoi
+     * @return hervee amjilttai update hiisen bol true - g esergeeree bol false - g butsaan
+     * */
     public boolean update(T object) {
         try (ConnectionSource con = DBConnection.getConnectionSource();) {
             Dao<T, String> dao = DaoManager.createDao(con, this.cl);
@@ -58,6 +75,11 @@ public class CrudDAO<T> {
         }
     }
 
+    /**
+     * @param <E> Tuhain modeliin primary key - iin data type
+     * @param pk ustgahiig hussen mor bichlegiin PK(ID) g ogj yvuulna
+     * @return hervee amjilttai delete hiisen bol true - g butsaan amjiltgu bol false - g butsaan
+     * */
     public <E> boolean delete(E pk) {
         try (ConnectionSource con = DBConnection.getConnectionSource();) {
             Dao<T, E> dao = DaoManager.createDao(con, this.cl);
@@ -68,6 +90,11 @@ public class CrudDAO<T> {
         }
     }
 
+    /**
+     * @param column ... WHERE <column> = <value> <- ene hesegt bgaa colum - iin utagiig ogj tvuulna
+     * @param value ... WHERE <column> = <value> <- ene hesegt bgaa value - iin utagiig ogj tvuulna
+     * @return haih nohtsol taarsan buhiil mor bichlegiig list - d oruulj tuuniig butsaaan
+     * */
     public List<T> search(String column, Object value) {
         try (ConnectionSource con = DBConnection.getConnectionSource();) {
             Dao<T, String> dao = DaoManager.createDao(con, this.cl);
@@ -77,6 +104,12 @@ public class CrudDAO<T> {
         }
     }
 
+    /**
+     * @param column ... WHERE <column> > <valueA> and <column> < <valueB> <- ene hesegt bgaa colum - iin utagiig ogj tvuulna
+     * @param valueA ... WHERE <column> > <valueA> and <column> < <valueB> <- ene hesegt bgaa valueA - iin utagiig ogj tvuulna
+     * @param valueB ... WHERE <column> > <valueA> and <column> < <valueB> <- ene hesegt bgaa value - iin utagiig ogj tvuulna
+     * @return haih nohtsol taarsan buhiil mor bichlegiig list - d oruulj tuuniig butsaaan
+     * */
     public List<T> search(String column, Object valueA, Object valueB) {
         try (ConnectionSource con = DBConnection.getConnectionSource();) {
             Dao<T, String> dao = DaoManager.createDao(con, this.cl);
