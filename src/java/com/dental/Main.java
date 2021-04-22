@@ -18,10 +18,6 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-
-        DemoExampleOfCrudDAO demo = new DemoExampleOfCrudDAO();
-        demo.insertExample();
-
         new HomeController(stage);
     }
 
