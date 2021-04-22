@@ -6,7 +6,7 @@
 .header-text{
     -fx-font-size: 18.0;
 }
-.borderedBox{
+.borderedBoxx{
    -fx-padding: 30;
    -fx-border-color: #6c63ff;
    -fx-border-insets: 5;
