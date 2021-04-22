@@ -42,6 +42,14 @@ public class Expenses {
 
     }
 
+    public float getAmount() {
+        return amount;
+    }
+
+    public void setAmount(float amount) {
+        this.amount = amount;
+    }
+
     public String getId() {
         return id;
     }

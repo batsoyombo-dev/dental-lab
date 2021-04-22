@@ -8,6 +8,7 @@ import com.j256.ormlite.support.ConnectionSource;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class CrudDAO<T> {
@@ -27,7 +28,7 @@ public class CrudDAO<T> {
             return dao.queryForAll();
         } catch(SQLException | IOException e) {
             e.printStackTrace();
-            return null;
+            return new ArrayList<>();
         }
     }
 
