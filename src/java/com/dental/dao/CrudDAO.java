@@ -21,7 +21,6 @@ public class CrudDAO<T> {
     public List<T> list() {
         try (ConnectionSource con = DBConnection.getConnectionSource();) {
             Dao<T, String> dao = DaoManager.createDao(con, this.cl);
-            dao.queryForAll();
             return dao.queryForAll();
         } catch(SQLException | IOException e) {
             e.printStackTrace();
