@@ -1,0 +1,61 @@
+.brdDocProf{
+    -fx-padding: 30px;
+    -fx-max-width: infinity;
+    -fx-background-color: white;
+}
+.header-text{
+    -fx-font-size: 18.0;
+}
+.borderedBox{
+   -fx-padding: 30;
+   -fx-border-color: #6c63ff;
+   -fx-border-insets: 5;
+   -fx-border-width: 3;
+   -fx-border-style: solid;
+}
+.generateBill{
+    -fx-background-color: #505050;
+    -fx-text-fill: white;
+    -fx-color: white;
+    -fx-font-size: 20.0;
+       -fx-border-radius: 12 12 0 0;
+       -fx-background-radius: 12 12 0 0;
+}
+.nothing{
+}
+.topLabel{
+    -fx-padding: 0px 0px 30px 0px;
+    -fx-font-size: 28;
+}
+.gridDocProf{
+    -fx-padding: 30px;
+    -fx-border-width: 1px 0px 0px 0px;
+    -fx-border-color: black;
+    -fx-vgap: 20;
+}
+.docProfLbl{
+    -fx-font-size: 20;
+}
+
+.btnContainer{
+
+}
+.btn{
+    -fx-pref-height: 40;
+    -fx-pref-width: 170;
+    -fx-background-radius: 20;
+    -fx-font-size: 20;
+}
+.table{
+
+}
+.mainbtn{
+    -fx-background-color: #6C63FF;
+    -fx-text-fill: white;
+}
+.otherbtn{
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: black;
+    -fx-border-radius: 20;
+}
