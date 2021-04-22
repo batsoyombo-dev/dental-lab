@@ -1,15 +1,95 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import com.dental.utils.LegendBorder?>
+<ScrollPane>
+    <content>
+        <BorderPane styleClass="brdDocProf" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+            <stylesheets>
+                <URL value="@../../css/global.css" />
+                <URL value="@../../css/screens/today_delivery_screen_layout.css" />
+            </stylesheets>
+            <top>
+                <HBox spacing="600" styleClass="borderedBox" >
+                    <Label styleClass="topLabel" text="Reminders" />
+                    <VBox spacing="10" styleClass="header-text">
+                        <Label text="Welcome: Root" />
+                        <Label text="Today: 2021.12.12"/>
+                    </VBox>
+                </HBox>
+            </top>
+            <center>
+                <VBox styleClass="borderedBox">
+                    <Label text="Today's Delivery" styleClass="generateBill"/>
+                    <HBox styleClass="borderedBox" spacing="20">
+                       <VBox spacing="5">
+                         <Label text="Show Entries expected on: "/>
+                         <HBox spacing="5">
+                             <Label text="Date:"/>
+                             <DatePicker/>
+                         </HBox>
+                       </VBox>
+                        <VBox spacing="5">
+                            <Label text="Search By: "/>
+                            <ComboBox value="Doctor">
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <String fx:value="Doctor"/>
+                                        <String fx:value="place holder"/>
+                                        <String fx:value="place holder"/>
+                                    </FXCollections>
+                                </items>
+                            </ComboBox>
+                        </VBox>
+                        <VBox spacing="5">
+                            <HBox></HBox>
+                            <HBox spacing="5">
+                                <ComboBox>
+                                    <items>
+                                        <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Doctor"/>
+                                            <String fx:value="place holder"/>
+                                            <String fx:value="place holder"/>
+                                        </FXCollections>
+                                    </items>
+                                </ComboBox>
+                                <Button text="Search" styleClass="btn"/>
+                            </HBox>
+                        </VBox>
+                    </HBox>
+                    <HBox spacing="20" prefWidth="900" styleClass="borderedBox">
+                            <VBox spacing="10">
+                                <TableView styleClass="table" >
+                                    <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/></columnResizePolicy>
+                                    <columns>
+                                        <TableColumn text="Inward No."  />
+                                        <TableColumn text="Job No." />
+                                        <TableColumn text="Doctor name" />
+                                        <TableColumn text="Patient Name"  />
+                                        <TableColumn text="Entry Date" />
+                                        <TableColumn text="Delivery Date" />
+                                        <TableColumn text="Type of work" />
+                                        <TableColumn text="Unit" />
+                                        <TableColumn text="Total charge" />
+                                    </columns>
+                                </TableView>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            prefHeight="400.0" prefWidth="600.0" stylesheets="@../../css/screens/today_delivery_screen_layout.css, @../../css/global.css">
+                            </VBox>
 
-    <Label text="today deli" />
+                    </HBox>
+                    <HBox styleClass="borderedBox" spacing="100">
+                        <Button text="Challan" styleClass="btn"/>
+                        <Button text="Deselct" styleClass="btn"/>
 
-</AnchorPane>
+                    </HBox>
+                </VBox>
+            </center>
+
+
+        </BorderPane>
+    </content>
+</ScrollPane>
