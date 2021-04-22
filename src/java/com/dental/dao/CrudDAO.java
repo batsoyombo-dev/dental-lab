@@ -18,6 +18,16 @@ public class CrudDAO<T> {
         this.cl = cl;
     }
 
+    public List<T> list() {
+        try (ConnectionSource con = DBConnection.getConnectionSource();) {
+            Dao<T, String> dao = DaoManager.createDao(con, this.cl);
+            return dao.queryForAll();
+        } catch(SQLException | IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
     public boolean create(T object) {
         try (ConnectionSource con = DBConnection.getConnectionSource();) {
             Dao<T, String> dao = DaoManager.createDao(con, this.cl);
