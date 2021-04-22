@@ -39,3 +39,11 @@
     -fx-border-color: black;
     -fx-border-radius: 20;
 }
+.datePicker{
+    -fx-font-size: 20;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-background-color: none;
+    -fx-pref-height: 40;
+
+}
