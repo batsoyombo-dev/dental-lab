@@ -3,7 +3,7 @@ package com.dental.models;
 import com.j256.ormlite.field.DataType;
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
-
+import jdk.jfr.Relational;
 @DatabaseTable(tableName = "doctor")
 public class Doctor {
 

@@ -65,7 +65,7 @@
                                     <cursor>
                                         <Cursor fx:constant="HAND" />
                                     </cursor></Button>
-                                <Button onAction="#handleUpdateClick" text="Update">
+                                <Button fx:id="btnUpdate" onAction="#handleUpdateClick" text="Update">
                                     <styleClass>
                                         <String fx:value="btn" />
                                         <String fx:value="otherbtn" />
@@ -77,7 +77,7 @@
                         </HBox>
                         <HBox styleClass="btnContainer" GridPane.columnIndex="1" GridPane.rowIndex="9">
                             <children>
-                                <Button text="Delete">
+                                <Button fx:id="btnDelete" onAction="#handleDelete" text="Delete">
                                     <styleClass>
                                         <String fx:value="btn" />
                                         <String fx:value="otherbtn" />
@@ -106,6 +106,22 @@
                   </ChoiceBox>
                   <DatePicker fx:id="doctorDOBPicker" styleClass="datePicker" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                     </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
                 </GridPane>
             </center>
             <bottom>
