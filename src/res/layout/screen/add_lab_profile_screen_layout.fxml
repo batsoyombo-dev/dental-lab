@@ -32,16 +32,14 @@
                 <Label styleClass="labProfLbl" text="Company's VAT TIN:" GridPane.rowIndex="6" />
                 <Label styleClass="labProfLbl" text="Company's CST TIN:" GridPane.rowIndex="7" />
                 <Label styleClass="labProfLbl" text="Company's Pan:" GridPane.rowIndex="8" />
-                <TextField styleClass="labProfTxtField" GridPane.columnIndex="1" />
-                <TextField styleClass="labProfTxtField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <TextField styleClass="labProfTxtField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                <TextField styleClass="labProfTxtField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                <TextField styleClass="labProfTxtField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                <TextField styleClass="labProfTxtField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                <TextField styleClass="labProfTxtField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
-                <TextField styleClass="labProfTxtField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
-                <TextField styleClass="labProfTxtField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                <Button text="Create Profile" GridPane.rowIndex="9">
+                <TextField fx:id="labPhoneTxt" styleClass="labProfTxtField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="labMobileTxt" styleClass="labProfTxtField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                <TextField fx:id="labMailTxt" styleClass="labProfTxtField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                <TextField fx:id="labVATTxt" styleClass="labProfTxtField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                <TextField fx:id="labVatTinTxt" styleClass="labProfTxtField" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                <TextField fx:id="labPanTxt" styleClass="labProfTxtField" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                <TextField fx:id="labAddressTxt" styleClass="labProfTxtField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Button onAction="#handleCreateClick" text="Create Profile" GridPane.rowIndex="9">
                     <styleClass>
                         <String fx:value="labProfBtn" />
                         <String fx:value="createBtn" />
@@ -53,7 +51,7 @@
                         <Insets top="40.0" />
                     </GridPane.margin>
                 </Button>
-                <Button mnemonicParsing="false" text="Cancel" GridPane.columnIndex="1" GridPane.rowIndex="9">
+                <Button mnemonicParsing="false" onAction="#handleCancelClick" text="Cancel" GridPane.columnIndex="1" GridPane.rowIndex="9">
                     <styleClass>
                         <String fx:value="labProfBtn" />
                         <String fx:value="cancelBtn" />
@@ -65,7 +63,25 @@
                         <Insets top="40.0" />
                     </GridPane.margin>
                 </Button>
+                <TextField fx:id="labNameTxt" styleClass="labProfTxtField" GridPane.columnIndex="1" />
+                <TextField fx:id="labCstTinTxt" styleClass="labProfTxtField" GridPane.columnIndex="1" GridPane.rowIndex="7" />
             </children>
+         <columnConstraints>
+            <ColumnConstraints />
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
         </GridPane>
     </center>
 
