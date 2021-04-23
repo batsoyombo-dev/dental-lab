@@ -11,7 +11,6 @@ import javafx.scene.input.MouseEvent;
 
 import java.net.URL;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -60,6 +59,8 @@ public class DailyExpensesScreenController implements Initializable, Navigateabl
 
         this.tv_expensesList.getSelectionModel().selectedItemProperty().addListener((obs, a, b) -> {
             Expenses expenses = this.tv_expensesList.getSelectionModel().getSelectedItem();
+            if (expenses == null)
+                return;
             try {
                 this.inflateFields(expenses);
             } catch (ParseException e) {
