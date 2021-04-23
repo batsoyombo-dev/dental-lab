@@ -41,3 +41,19 @@
     -fx-border-color: black;
     -fx-border-radius: 20;
 }
+.choice-box{
+    -fx-font-size: 20;
+    -fx-border-color: black;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-background-color: none;
+    -fx-pref-height: 40;
+}
+.datePicker{
+    -fx-font-size: 20;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-background-color: none;
+    -fx-pref-height: 40;
+
+}
