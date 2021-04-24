@@ -22,22 +22,18 @@ public class Supplier {
     @DatabaseField(columnName = "address", canBeNull = false, dataType = DataType.STRING)
     private String address;
 
-    @DatabaseField(columnName = "designation", canBeNull = false, dataType = DataType.STRING)
-    private String designation;
-
     @DatabaseField(columnName = "mobile_num", canBeNull = false, dataType = DataType.STRING)
     private String mobileNumber;
 
     @DatabaseField(canBeNull = false, dataType = DataType.STRING)
     private String email;
 
-    public Supplier(String id, String name, char gender, String dob, String address, String designation, String mobileNumber, String email) {
+    public Supplier(String id, String name, char gender, String dob, String address, String mobileNumber, String email) {
         this.id = id;
         this.name = name;
         this.gender = gender;
         this.dob = dob;
         this.address = address;
-        this.designation = designation;
         this.mobileNumber = mobileNumber;
         this.email = email;
     }
@@ -84,14 +80,6 @@ public class Supplier {
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    public String getDesignation() {
-        return designation;
-    }
-
-    public void setDesignation(String designation) {
-        this.designation = designation;
     }
 
     public String getMobileNumber() {
