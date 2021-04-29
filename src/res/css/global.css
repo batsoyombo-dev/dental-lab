@@ -24,3 +24,12 @@
     -fx-background-color: none;
     -fx-pref-height: 40;
 }
+
+DatePicker, Spinner {
+    -fx-background-color: #fff;
+}
+
+DatePicker .arrow-button {
+    -fx-background-color: #fff;
+    -fx-font-size: 24px;
+}

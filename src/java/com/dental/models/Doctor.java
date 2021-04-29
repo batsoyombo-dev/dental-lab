@@ -136,17 +136,6 @@ public class Doctor {
 
     @Override
     public String toString() {
-        return "Doctor{" +
-                "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", gender=" + gender +
-                ", dob='" + dob + '\'' +
-                ", clinicAddress='" + clinicAddress + '\'' +
-                ", paymentAddress='" + paymentAddress + '\'' +
-                ", mobileNumber='" + mobileNumber + '\'' +
-                ", landlineNumber='" + landlineNumber + '\'' +
-                ", email='" + email + '\'' +
-                ", balance=" + balance +
-                '}';
+        return this.name;
     }
 }

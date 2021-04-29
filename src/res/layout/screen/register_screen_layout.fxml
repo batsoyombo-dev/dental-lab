@@ -91,23 +91,13 @@
                                     <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="7" />
                                     <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="6" />
                                     <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="5" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" text="4">
-                                       <styleClass>
-                                          <String fx:value="btn" />
-                                          <String fx:value="mainbtn" />
-                                       </styleClass>
-                                    </Button>
+                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="4" />
                                     <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="3" />
                                     <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="2" />
                                     <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="1" />
                                     <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="1" />
                                     <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="2" />
-                                    <Button layoutX="76.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" text="3">
-                                       <styleClass>
-                                          <String fx:value="btn" />
-                                          <String fx:value="mainbtn" />
-                                       </styleClass>
-                                    </Button>
+                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="3" />
                                     <Button layoutX="132.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="4" />
                                     <Button layoutX="160.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="5" />
                                     <Button layoutX="188.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="6" />
