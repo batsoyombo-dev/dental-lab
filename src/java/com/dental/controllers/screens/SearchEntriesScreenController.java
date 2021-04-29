@@ -165,6 +165,10 @@ public class SearchEntriesScreenController implements Initializable, Navigateabl
         }
     }
 
+    public void handleCancelBtnClick(MouseEvent e) {
+        this.clearFields();
+    }
+
     private void inflateFields() {
         if (this.chosenRegistration == null)
             return;

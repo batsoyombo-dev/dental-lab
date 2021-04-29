@@ -11,7 +11,7 @@ public class LegendBorder extends StackPane {
 
     String rootStyle = "-fx-content-display: top;" +
             "-fx-padding: 20 16 16 16;" +
-            "-fx-border-width: 2;",
+            "-fx-border-width: 1;",
             labelStyle = "-fx-translate-y: -32;" +
                     "-fx-padding: 0 5;";
 

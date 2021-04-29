@@ -22,10 +22,10 @@
 <?import javafx.scene.control.ScrollPane?>
 <?import com.dental.utils.LegendBorder?>
 <?import javafx.collections.FXCollections?>
-<BorderPane styleClass="BorderStyle" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" style="-fx-background-color: #fff;">
+<BorderPane styleClass="BorderStyle" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" style="-fx-background-color: #fff; -fx-padding: 30px;">
     <top>
-        <HBox style="-fx-border-style: solid; -fx-border-width: 0 0 2 0;" BorderPane.alignment="CENTER">
-            <Label alignment="BOTTOM_LEFT" prefWidth="197.0" styleClass="topLabel" text="Search Entries"/>
+        <HBox styleClass="header-container">
+            <Label styleClass="topLabel" text="Search Entries" />
         </HBox>
     </top>
     <center>
@@ -85,59 +85,67 @@
                                    <Label text="Work Type" />
                                    <ChoiceBox fx:id="cb_workTypes" />
                                </HBox>
-                               <HBox spacing="15.0">
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="U"/>
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="8" onMouseClicked="#handleTeethSelectionClick" id="UL8" fx:id="UL8" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="7" onMouseClicked="#handleTeethSelectionClick" id="UL7" fx:id="UL7" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="6" onMouseClicked="#handleTeethSelectionClick" id="UL6" fx:id="UL6" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="5" onMouseClicked="#handleTeethSelectionClick" id="UL5" fx:id="UL5" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="4" onMouseClicked="#handleTeethSelectionClick" id="UL4" fx:id="UL4" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="3" onMouseClicked="#handleTeethSelectionClick" id="UL3" fx:id="UL3" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="2" onMouseClicked="#handleTeethSelectionClick" id="UL2" fx:id="UL2" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="1" onMouseClicked="#handleTeethSelectionClick" id="UL1" fx:id="UL1" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="1" onMouseClicked="#handleTeethSelectionClick" id="UR1" fx:id="UR1" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="2" onMouseClicked="#handleTeethSelectionClick" id="UR2" fx:id="UR2" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="3" onMouseClicked="#handleTeethSelectionClick" id="UR3" fx:id="UR3" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="4" onMouseClicked="#handleTeethSelectionClick" id="UR4" fx:id="UR4" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="5" onMouseClicked="#handleTeethSelectionClick" id="UR5" fx:id="UR5" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="6" onMouseClicked="#handleTeethSelectionClick" id="UR6" fx:id="UR6" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="7" onMouseClicked="#handleTeethSelectionClick" id="UR7" fx:id="UR7" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="8" onMouseClicked="#handleTeethSelectionClick" id="UR8" fx:id="UR8" />
+                               <HBox spacing="20">
+                                   <Button mnemonicParsing="false" styleClass="teeth-btn, non-teeth" text="U"/>
+                                   <HBox spacing="5">
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="8" onMouseClicked="#handleTeethSelectionClick" id="UL8" fx:id="UL8" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="7" onMouseClicked="#handleTeethSelectionClick" id="UL7" fx:id="UL7" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="6" onMouseClicked="#handleTeethSelectionClick" id="UL6" fx:id="UL6" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="5" onMouseClicked="#handleTeethSelectionClick" id="UL5" fx:id="UL5" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="4" onMouseClicked="#handleTeethSelectionClick" id="UL4" fx:id="UL4" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="3" onMouseClicked="#handleTeethSelectionClick" id="UL3" fx:id="UL3" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="2" onMouseClicked="#handleTeethSelectionClick" id="UL2" fx:id="UL2" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="1" onMouseClicked="#handleTeethSelectionClick" id="UL1" fx:id="UL1" />
+                                   </HBox>
+                                   <HBox spacing="5">
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="1" onMouseClicked="#handleTeethSelectionClick" id="UR1" fx:id="UR1" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="2" onMouseClicked="#handleTeethSelectionClick" id="UR2" fx:id="UR2" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="3" onMouseClicked="#handleTeethSelectionClick" id="UR3" fx:id="UR3" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="4" onMouseClicked="#handleTeethSelectionClick" id="UR4" fx:id="UR4" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="5" onMouseClicked="#handleTeethSelectionClick" id="UR5" fx:id="UR5" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="6" onMouseClicked="#handleTeethSelectionClick" id="UR6" fx:id="UR6" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="7" onMouseClicked="#handleTeethSelectionClick" id="UR7" fx:id="UR7" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="8" onMouseClicked="#handleTeethSelectionClick" id="UR8" fx:id="UR8" />
+                                   </HBox>
                                </HBox>
-                               <HBox spacing="15.0">
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="U"/>
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="8" onMouseClicked="#handleTeethSelectionClick" id="LL8" fx:id="LL8" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="7" onMouseClicked="#handleTeethSelectionClick" id="LL7" fx:id="LL7" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="6" onMouseClicked="#handleTeethSelectionClick" id="LL6" fx:id="LL6" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="5" onMouseClicked="#handleTeethSelectionClick" id="LL5" fx:id="LL5" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="4" onMouseClicked="#handleTeethSelectionClick" id="LL4" fx:id="LL4" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="3" onMouseClicked="#handleTeethSelectionClick" id="LL3" fx:id="LL3" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="2" onMouseClicked="#handleTeethSelectionClick" id="LL2" fx:id="LL2" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="1" onMouseClicked="#handleTeethSelectionClick" id="LL1" fx:id="LL1" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="1" onMouseClicked="#handleTeethSelectionClick" id="LR1" fx:id="LR1" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="2" onMouseClicked="#handleTeethSelectionClick" id="LR2" fx:id="LR2" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="3" onMouseClicked="#handleTeethSelectionClick" id="LR3" fx:id="LR3" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="4" onMouseClicked="#handleTeethSelectionClick" id="LR4" fx:id="LR4" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="5" onMouseClicked="#handleTeethSelectionClick" id="LR5" fx:id="LR5" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="6" onMouseClicked="#handleTeethSelectionClick" id="LR6" fx:id="LR6" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="7" onMouseClicked="#handleTeethSelectionClick" id="LR7" fx:id="LR7" />
-                                   <Button mnemonicParsing="false" styleClass="teeth-btn" text="8" onMouseClicked="#handleTeethSelectionClick" id="LR8" fx:id="LR8" />
+                               <HBox spacing="20">
+                                   <Button mnemonicParsing="false" styleClass="teeth-btn, non-teeth" text="L"/>
+                                   <HBox spacing="5">
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="8" onMouseClicked="#handleTeethSelectionClick" id="LL8" fx:id="LL8" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="7" onMouseClicked="#handleTeethSelectionClick" id="LL7" fx:id="LL7" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="6" onMouseClicked="#handleTeethSelectionClick" id="LL6" fx:id="LL6" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="5" onMouseClicked="#handleTeethSelectionClick" id="LL5" fx:id="LL5" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="4" onMouseClicked="#handleTeethSelectionClick" id="LL4" fx:id="LL4" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="3" onMouseClicked="#handleTeethSelectionClick" id="LL3" fx:id="LL3" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="2" onMouseClicked="#handleTeethSelectionClick" id="LL2" fx:id="LL2" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="1" onMouseClicked="#handleTeethSelectionClick" id="LL1" fx:id="LL1" />
+                                   </HBox>
+                                   <HBox spacing="5">
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="1" onMouseClicked="#handleTeethSelectionClick" id="LR1" fx:id="LR1" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="2" onMouseClicked="#handleTeethSelectionClick" id="LR2" fx:id="LR2" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="3" onMouseClicked="#handleTeethSelectionClick" id="LR3" fx:id="LR3" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="4" onMouseClicked="#handleTeethSelectionClick" id="LR4" fx:id="LR4" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="5" onMouseClicked="#handleTeethSelectionClick" id="LR5" fx:id="LR5" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="6" onMouseClicked="#handleTeethSelectionClick" id="LR6" fx:id="LR6" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="7" onMouseClicked="#handleTeethSelectionClick" id="LR7" fx:id="LR7" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="8" onMouseClicked="#handleTeethSelectionClick" id="LR8" fx:id="LR8" />
+                                   </HBox>
                                </HBox>
                            </VBox>
                        </LegendBorder>
                         <VBox spacing="20" alignment="center">
                             <HBox styleClass="form-group">
                                 <Label text="Trial Date:" />
-                                <DatePicker fx:id="dp_trialDate" />
+                                <DatePicker fx:id="dp_trialDate" HBox.hgrow="ALWAYS" maxWidth="Infinity" />
                             </HBox>
                             <HBox styleClass="form-group">
                                 <Label text="Finished Date:" />
                                 <DatePicker fx:id="dp_finishedDate" />
                             </HBox>
                             <HBox spacing="20">
-                                <Button styleClass="btn" text="Update" onMouseClicked="#handleUpdateBtnClick" />
-                                <Button styleClass="btn" text="Delete" onMouseClicked="#handleDeleteBtnClick" />
-                                <Button styleClass="btn" text="Cancel" />
+                                <Button styleClass="btn" text="Update" onMouseClicked="#handleUpdateBtnClick" HBox.hgrow="ALWAYS" maxWidth="Infinity" />
+                                <Button styleClass="btn" text="Delete" onMouseClicked="#handleDeleteBtnClick" HBox.hgrow="ALWAYS" maxWidth="Infinity" />
+                                <Button styleClass="btn" text="Cancel" onMouseClicked="#handleCancelBtnClick" HBox.hgrow="ALWAYS" maxWidth="Infinity" />
                             </HBox>
                         </VBox>
                     </HBox>
