@@ -19,308 +19,142 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="1000.0" prefWidth="1200.0" styleClass="BorderStyle" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
-   <stylesheets>
-      <URL value="@../../css/global.css" />
-      <URL value="@../../css/screens/search_entries_screen_layout.css" />
-   </stylesheets>
-   <left>
-      <AnchorPane prefHeight="924.0" prefWidth="437.0" BorderPane.alignment="CENTER">
-         <children>
-            <StackPane layoutX="1.0" layoutY="26.0" prefHeight="162.0" prefWidth="409.0" style="-fx-border-color: black; -fx-border-radius: 5;">
-               <children>
-                  <HBox prefHeight="152.0" prefWidth="363.0" spacing="10.0">
-                     <children>
-                        <Label styleClass="lblSupp" text="Search By ">
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                        </Label>
-                        <Label styleClass="lblSupp" text="Search Text" />
-                     </children>
-                     <padding>
-                        <Insets top="20.0" />
-                     </padding>
-                  </HBox>
-                  <HBox prefHeight="180.0" prefWidth="383.0" spacing="10.0">
-                     <padding>
-                        <Insets top="50.0" />
-                     </padding>
-                     <children>
-                        <ChoiceBox prefHeight="40.0" prefWidth="106.0" styleClass="choiceBoxStyle" />
-                        <ChoiceBox prefHeight="40.0" prefWidth="169.0" styleClass="choiceBoxStyle" />
-                        <Button mnemonicParsing="false" prefHeight="23.0" prefWidth="105.0" styleClass="otherbtn" text="Search">
-                           <HBox.margin>
-                              <Insets right="10.0" />
-                           </HBox.margin>
-                        </Button>
-                     </children>
-                  </HBox>
-                  <Label prefHeight="24.0" prefWidth="69.0" style="-fx-background-color: white;" styleClass="lblSupp" text="Search" translateX="-150.0" translateY="-85.0" />
-               </children>
-               <padding>
-                  <Insets left="10.0" />
-               </padding>
-            </StackPane>
-            <TableView layoutX="6.0" layoutY="198.0" prefHeight="688.0" prefWidth="405.0">
-              <columns>
-                <TableColumn prefWidth="75.0" text="Inward No " />
-                <TableColumn prefWidth="75.0" text="Entry Date " />
-                  <TableColumn prefWidth="75.0" text="Paient " />
-                  <TableColumn prefWidth="87.6666259765625" text="Doctor Name" />
-                  <TableColumn prefWidth="62.3333740234375" text="Doctor ID" />
-              </columns>
-            </TableView>
-         </children>
-      </AnchorPane>
-   </left>
-   <center>
-      <AnchorPane prefHeight="909.0" prefWidth="760.0" BorderPane.alignment="CENTER">
-         <children>
-            <HBox alignment="CENTER" layoutX="46.0" layoutY="21.0" prefHeight="48.0" prefWidth="252.0" spacing="10.0">
-               <children>
-                  <Label prefHeight="24.0" prefWidth="299.0" styleClass="lblSupp" text="Inward No.:">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </Label>
-                  <TextField />
-               </children>
-            </HBox>
-            <HBox alignment="CENTER" layoutX="312.0" layoutY="21.0" prefHeight="48.0" prefWidth="204.0" spacing="10.0">
-               <children>
-                  <Label prefHeight="24.0" prefWidth="245.0" styleClass="lblSupp" text="Job NO.:">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </Label>
-                  <TextField />
-               </children>
-            </HBox>
-            <HBox alignment="CENTER" layoutX="522.0" layoutY="21.0" prefHeight="48.0" prefWidth="194.0" spacing="10.0">
-               <children>
-                  <Label prefHeight="24.0" prefWidth="217.0" styleClass="lblSupp" text="Date:">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </Label>
-                  <DatePicker />
-               </children>
-            </HBox>
-            <VBox layoutX="46.0" layoutY="80.0" prefHeight="118.0" prefWidth="340.0" spacing="10.0">
-               <children>
-                  <HBox alignment="CENTER" prefHeight="48.0" prefWidth="314.0" spacing="10.0">
-                     <children>
-                        <Label prefHeight="24.0" prefWidth="217.0" styleClass="lblSupp" text="Doctor:">
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                        </Label>
-                        <ChoiceBox prefHeight="40.0" prefWidth="286.0" styleClass="choiceBoxStyle" />
-                     </children>
-                  </HBox>
-                  <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="48.0" prefWidth="314.0" spacing="10.0">
-                     <children>
-                        <Label prefHeight="24.0" prefWidth="335.0" styleClass="lblSupp" text="patient Name">
-                           <HBox.margin>
-                              <Insets />
-                           </HBox.margin>
-                        </Label>
-                        <TextField prefWidth="400.0" />
-                     </children>
-                  </HBox>
-               </children>
+<?import javafx.scene.control.ScrollPane?>
+<?import com.dental.utils.LegendBorder?>
+<?import javafx.collections.FXCollections?>
+<BorderPane styleClass="BorderStyle" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" style="-fx-background-color: #fff; -fx-padding: 30px;">
+    <top>
+        <HBox styleClass="header-container">
+            <Label styleClass="topLabel" text="Search Entries" />
+        </HBox>
+    </top>
+    <center>
+        <ScrollPane styleClass="main-container">
+            <VBox styleClass="sub-container">
+                <HBox styleClass="search-container">
+                    <VBox spacing="20">
+                        <VBox styleClass="form-group">
+                            <Label text="Search by:" />
+                            <ChoiceBox fx:id="cb_searchColumn" maxWidth="Infinity" HBox.hgrow="ALWAYS">
+                                <items>
+                                    <FXCollections fx:factory="observableArrayList">
+                                        <String fx:value="id" />
+                                        <String fx:value="patient_name" />
+                                    </FXCollections>
+                                </items>
+                            </ChoiceBox>
+                        </VBox>
+                        <VBox styleClass="form-group">
+                            <Label text="Search Value" />
+                            <TextField fx:id="inp_searchValueField" />
+                        </VBox>
+                        <Button onMouseClicked="#handleSearchBtnClick" text="Search" styleClass="btn" maxWidth="Infinity" HBox.hgrow="ALWAYS" />
+                    </VBox>
+                    <ScrollPane HBox.hgrow="ALWAYS" fitToWidth="true" fitToHeight="true">
+                        <TableView fx:id="tv_searchResult" HBox.hgrow="ALWAYS" prefHeight="250">
+                            <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/></columnResizePolicy>
+                            <columns>
+                                <TableColumn fx:id="tc_regIdColumn" text="Inward No" />
+                                <TableColumn fx:id="tc_regFateColumn" text="Entry Date" />
+                                <TableColumn fx:id="tc_regPatientNameColumn" text="Patient Name" />
+                                <TableColumn fx:id="tc_regDoctorIdColumn" text="Doctor Id" />
+                            </columns>
+                        </TableView>
+                    </ScrollPane>
+                </HBox>
+
+                <VBox styleClass="sub-container">
+                    <HBox styleClass="search-container">
+                        <HBox styleClass="form-group">
+                            <Label text="Doctor: " />
+                            <ChoiceBox fx:id="cb_doctors" maxWidth="Infinity" HBox.hgrow="ALWAYS" />
+                        </HBox>
+                        <HBox styleClass="form-group">
+                            <Label text="Patient Name: " />
+                            <TextField fx:id="inp_patientNameField" />
+                        </HBox>
+                        <HBox styleClass="form-group">
+                            <Label text="Date: " />
+                            <DatePicker fx:id="dp_regDateField" />
+                        </HBox>
+                    </HBox>
+                    <HBox styleClass="search-container">
+                       <LegendBorder labelTitle="Teeth Selection" labelBackgroundColor="#fff" styleClass="titled-border">
+                           <VBox spacing="20.0">
+                               <HBox styleClass="form-group">
+                                   <Label text="Work Type" />
+                                   <ChoiceBox fx:id="cb_workTypes" />
+                               </HBox>
+                               <HBox spacing="20">
+                                   <Button mnemonicParsing="false" styleClass="teeth-btn, non-teeth" text="U"/>
+                                   <HBox spacing="5">
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="8" onMouseClicked="#handleTeethSelectionClick" id="UL8" fx:id="UL8" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="7" onMouseClicked="#handleTeethSelectionClick" id="UL7" fx:id="UL7" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="6" onMouseClicked="#handleTeethSelectionClick" id="UL6" fx:id="UL6" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="5" onMouseClicked="#handleTeethSelectionClick" id="UL5" fx:id="UL5" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="4" onMouseClicked="#handleTeethSelectionClick" id="UL4" fx:id="UL4" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="3" onMouseClicked="#handleTeethSelectionClick" id="UL3" fx:id="UL3" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="2" onMouseClicked="#handleTeethSelectionClick" id="UL2" fx:id="UL2" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="1" onMouseClicked="#handleTeethSelectionClick" id="UL1" fx:id="UL1" />
+                                   </HBox>
+                                   <HBox spacing="5">
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="1" onMouseClicked="#handleTeethSelectionClick" id="UR1" fx:id="UR1" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="2" onMouseClicked="#handleTeethSelectionClick" id="UR2" fx:id="UR2" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="3" onMouseClicked="#handleTeethSelectionClick" id="UR3" fx:id="UR3" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="4" onMouseClicked="#handleTeethSelectionClick" id="UR4" fx:id="UR4" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="5" onMouseClicked="#handleTeethSelectionClick" id="UR5" fx:id="UR5" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="6" onMouseClicked="#handleTeethSelectionClick" id="UR6" fx:id="UR6" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="7" onMouseClicked="#handleTeethSelectionClick" id="UR7" fx:id="UR7" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="8" onMouseClicked="#handleTeethSelectionClick" id="UR8" fx:id="UR8" />
+                                   </HBox>
+                               </HBox>
+                               <HBox spacing="20">
+                                   <Button mnemonicParsing="false" styleClass="teeth-btn, non-teeth" text="L"/>
+                                   <HBox spacing="5">
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="8" onMouseClicked="#handleTeethSelectionClick" id="LL8" fx:id="LL8" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="7" onMouseClicked="#handleTeethSelectionClick" id="LL7" fx:id="LL7" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="6" onMouseClicked="#handleTeethSelectionClick" id="LL6" fx:id="LL6" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="5" onMouseClicked="#handleTeethSelectionClick" id="LL5" fx:id="LL5" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="4" onMouseClicked="#handleTeethSelectionClick" id="LL4" fx:id="LL4" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="3" onMouseClicked="#handleTeethSelectionClick" id="LL3" fx:id="LL3" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="2" onMouseClicked="#handleTeethSelectionClick" id="LL2" fx:id="LL2" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="1" onMouseClicked="#handleTeethSelectionClick" id="LL1" fx:id="LL1" />
+                                   </HBox>
+                                   <HBox spacing="5">
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="1" onMouseClicked="#handleTeethSelectionClick" id="LR1" fx:id="LR1" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="2" onMouseClicked="#handleTeethSelectionClick" id="LR2" fx:id="LR2" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="3" onMouseClicked="#handleTeethSelectionClick" id="LR3" fx:id="LR3" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="4" onMouseClicked="#handleTeethSelectionClick" id="LR4" fx:id="LR4" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="5" onMouseClicked="#handleTeethSelectionClick" id="LR5" fx:id="LR5" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="6" onMouseClicked="#handleTeethSelectionClick" id="LR6" fx:id="LR6" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="7" onMouseClicked="#handleTeethSelectionClick" id="LR7" fx:id="LR7" />
+                                       <Button mnemonicParsing="false" styleClass="teeth-btn" text="8" onMouseClicked="#handleTeethSelectionClick" id="LR8" fx:id="LR8" />
+                                   </HBox>
+                               </HBox>
+                           </VBox>
+                       </LegendBorder>
+                        <VBox spacing="20" alignment="center">
+                            <HBox styleClass="form-group">
+                                <Label text="Trial Date:" />
+                                <DatePicker fx:id="dp_trialDate" HBox.hgrow="ALWAYS" maxWidth="Infinity" />
+                            </HBox>
+                            <HBox styleClass="form-group">
+                                <Label text="Finished Date:" />
+                                <DatePicker fx:id="dp_finishedDate" />
+                            </HBox>
+                            <HBox spacing="20">
+                                <Button styleClass="btn" text="Update" onMouseClicked="#handleUpdateBtnClick" HBox.hgrow="ALWAYS" maxWidth="Infinity" />
+                                <Button styleClass="btn" text="Delete" onMouseClicked="#handleDeleteBtnClick" HBox.hgrow="ALWAYS" maxWidth="Infinity" />
+                                <Button styleClass="btn" text="Cancel" onMouseClicked="#handleCancelBtnClick" HBox.hgrow="ALWAYS" maxWidth="Infinity" />
+                            </HBox>
+                        </VBox>
+                    </HBox>
+                </VBox>
             </VBox>
-            <HBox alignment="CENTER_LEFT" layoutX="42.0" layoutY="198.0" prefHeight="58.0" prefWidth="719.0" spacing="10.0">
-               <children>
-                  <Label prefHeight="24.0" prefWidth="134.0" styleClass="lblSupp" text="Doctor:">
-                     <HBox.margin>
-                        <Insets />
-                     </HBox.margin>
-                  </Label>
-                  <ChoiceBox prefHeight="40.0" prefWidth="206.0" styleClass="choiceBoxStyle" />
-                  <Button mnemonicParsing="false" prefHeight="41.0" prefWidth="120.0" style="-fx-pref-width: 105;" styleClass="otherbtn1" text="Add New" />
-                  <Button mnemonicParsing="false" prefHeight="23.0" prefWidth="166.0" style="-fx-pref-width: 120;" styleClass="otherbtn1" text="Select And Add" />
-                  <Button mnemonicParsing="false" prefWidth="101.0" style="-fx-pref-width: 110;" text="Add New Work">
-                     <styleClass>
-                        <String fx:value="otherbtn1" />
-                        <String fx:value="mainbtn" />
-                     </styleClass>
-                  </Button>
-               </children>
-            </HBox>
-            <StackPane layoutX="42.0" layoutY="267.0" prefHeight="274.0" prefWidth="429.0" style="-fx-border-color: black; -fx-border-radius: 20;">
-               <children>
-                  <AnchorPane prefHeight="267.0" prefWidth="673.0">
-                     <children>
-                        <VBox layoutY="14.0" prefHeight="78.0" prefWidth="439.0" spacing="15.0">
-                           <children>
-                              <HBox prefHeight="46.0" prefWidth="445.0" spacing="20.0">
-                                 <children>
-                                    <Label alignment="BOTTOM_LEFT" prefHeight="34.0" prefWidth="118.0" styleClass="lblSupp" text="Work Type">
-                                       <padding>
-                                          <Insets left="10.0" />
-                                       </padding>
-                                    </Label>
-                                    <ChoiceBox prefWidth="209.0" styleClass="choiceBoxStyle" />
-                                 </children>
-                              </HBox>
-                              <Label styleClass="lblSupp" text="Region">
-                                 <VBox.margin>
-                                    <Insets left="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                           </children>
-                        </VBox>
-                        <VBox layoutY="113.0" prefHeight="133.0" prefWidth="717.0" spacing="20.0">
-                           <children>
-                              <HBox prefHeight="55.0" prefWidth="908.0" spacing="11.0">
-                                 <children>
-                                    <Button maxHeight="59.0" maxWidth="49.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="55.0" style="-fx-pref-width: 50;" text="U">
-                                       <HBox.margin>
-                                          <Insets left="10.0" />
-                                       </HBox.margin>
-                                       <styleClass>
-                                          <String fx:value="btn1" />
-                                          <String fx:value="otherbtn" />
-                                       </styleClass>
-                                    </Button>
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="39.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="71.0" styleClass="btn" text="8" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="7" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="6" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="43.0" styleClass="btn" text="5" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" text="4">
-                                       <styleClass>
-                                          <String fx:value="btn" />
-                                          <String fx:value="mainbtn" />
-                                       </styleClass>
-                                    </Button>
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="3" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="2" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="74.0" styleClass="btn" text="1" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="1" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="2" />
-                                    <Button layoutX="76.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" text="3">
-                                       <styleClass>
-                                          <String fx:value="btn" />
-                                          <String fx:value="mainbtn" />
-                                       </styleClass>
-                                    </Button>
-                                    <Button layoutX="132.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="4" />
-                                    <Button layoutX="160.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="5" />
-                                    <Button layoutX="188.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="6" />
-                                    <Button layoutX="188.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="7" />
-                                    <Button layoutX="216.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="8" />
-                                 </children>
-                              </HBox>
-                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="48.0" prefWidth="731.0" spacing="11.0">
-                                 <children>
-                                    <Button maxHeight="59.0" maxWidth="49.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="63.0" style="-fx-pref-width: 50;" text="L">
-                                       <HBox.margin>
-                                          <Insets left="10.0" />
-                                       </HBox.margin>
-                                       <styleClass>
-                                          <String fx:value="btn1" />
-                                          <String fx:value="otherbtn" />
-                                       </styleClass>
-                                    </Button>
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="39.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="76.0" styleClass="btn" text="8" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" text="7">
-                                       <styleClass>
-                                          <String fx:value="btn" />
-                                          <String fx:value="mainbtn" />
-                                       </styleClass>
-                                    </Button>
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="6" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="5" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="4" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="3" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="2" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="1" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="1" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="2" />
-                                    <Button layoutX="76.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="3" />
-                                    <Button layoutX="132.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="4" />
-                                    <Button layoutX="160.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="5" />
-                                    <Button layoutX="188.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="6" />
-                                    <Button layoutX="188.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="7" />
-                                    <Button layoutX="216.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="8" />
-                                 </children>
-                              </HBox>
-                           </children>
-                        </VBox>
-                        <Label style="-fx-background-color: white;" styleClass="lblSupp" text="Teeth Selection" translateX="30.0" translateY="-15.0" />
-                     </children>
-                  </AnchorPane>
-               </children>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </StackPane>
-            <GridPane layoutX="36.0" layoutY="571.0" prefHeight="234.0" prefWidth="644.0">
-              <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="179.33331298828125" minWidth="10.0" prefWidth="139.0" />
-                <ColumnConstraints hgrow="SOMETIMES" maxWidth="252.66668701171875" minWidth="10.0" prefWidth="175.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="226.3333740234375" minWidth="10.0" prefWidth="156.0" />
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="219.0" minWidth="10.0" prefWidth="174.0" />
-              </columnConstraints>
-              <rowConstraints>
-                  <RowConstraints maxHeight="60.6666259765625" minHeight="10.0" prefHeight="60.6666259765625" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="61.3333740234375" minHeight="10.0" prefHeight="49.3333740234375" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="80.66668701171875" minHeight="4.6666259765625" prefHeight="36.66668701171875" vgrow="SOMETIMES" />
-                <RowConstraints maxHeight="54.66668701171875" minHeight="0.6666259765625" prefHeight="51.33331298828125" vgrow="SOMETIMES" />
-              </rowConstraints>
-               <children>
-                  <Label prefHeight="24.0" prefWidth="68.0" styleClass="lblSupp" text="Shade:" />
-                  <Label styleClass="lblSupp" text="Unit:" GridPane.rowIndex="1" />
-                  <Label styleClass="lblSupp" text="Trial Date:" GridPane.rowIndex="2" />
-                  <Label styleClass="lblSupp" text="Funished Date:" GridPane.rowIndex="3" />
-                  <ChoiceBox prefWidth="150.0" styleClass="choiceBoxStyle" GridPane.columnIndex="1" />
-                  <TextField prefHeight="35.0" prefWidth="218.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                  <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                  <DatePicker GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                  <Button mnemonicParsing="false" prefWidth="95.0" style="-fx-pref-width: 150;" styleClass="otherbtn1" text="Add New" GridPane.columnIndex="2" />
-                  <Label prefHeight="24.0" prefWidth="85.0" styleClass="lblSupp" text="Charges:" GridPane.columnIndex="2" GridPane.rowIndex="1">
-                     <GridPane.margin>
-                        <Insets left="20.0" />
-                     </GridPane.margin>
-                  </Label>
-                  <TextField prefHeight="41.0" prefWidth="202.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                  <Label styleClass="lblSupp" text="Extra charges:" GridPane.columnIndex="2" GridPane.rowIndex="2">
-                     <GridPane.margin>
-                        <Insets left="20.0" />
-                     </GridPane.margin>
-                  </Label>
-                  <Label styleClass="lblSupp" text="Total charges" GridPane.columnIndex="2" GridPane.rowIndex="3">
-                     <GridPane.margin>
-                        <Insets left="20.0" />
-                     </GridPane.margin>
-                  </Label>
-                  <TextField GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                  <TextField GridPane.columnIndex="3" GridPane.rowIndex="3" />
-               </children>
-            </GridPane>
-            <HBox alignment="CENTER_LEFT" layoutX="22.0" layoutY="820.0" prefHeight="65.0" prefWidth="631.0" spacing="20.0">
-               <children>
-                  <Button mnemonicParsing="false" text="Update">
-                     <styleClass>
-                        <String fx:value="otherbtn" />
-                        <String fx:value="mainbtn" />
-                     </styleClass>
-                  </Button>
-                  <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="otherbtn" text="Delete" />
-                  <Button layoutX="64.0" layoutY="10.0" mnemonicParsing="false" styleClass="otherbtn" text="Challan" />
-                  <Button layoutX="118.0" layoutY="10.0" mnemonicParsing="false" prefWidth="127.0" style="-fx-pref-width: 120;" styleClass="otherbtn" text="Refresh" />
-               </children>
-            </HBox>
-         </children>
-      </AnchorPane>
-   </center>
-   <top>
-      <HBox prefHeight="75.0" prefWidth="1133.0" style="-fx-border-style: solid; -fx-border-width: 0 0 2 0;" BorderPane.alignment="CENTER">
-         <children>
-            <Label alignment="BOTTOM_LEFT" prefWidth="197.0" styleClass="topLabel" text="Search Entries" />
-         </children>
-      </HBox>
-   </top>
+        </ScrollPane>
+    </center>
+    <stylesheets>
+        <URL value="@../../css/global.css" />
+        <URL value="@../../css/screens/search_entries_screen_layout.css" />
+    </stylesheets>
 </BorderPane>

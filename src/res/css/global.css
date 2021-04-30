@@ -19,8 +19,18 @@
 {
     -fx-font-size: 20;
     -fx-border-color: black;
+    -fx-border-width: 1px;
     -fx-background-radius: 20px;
     -fx-border-radius: 20px;
     -fx-background-color: none;
     -fx-pref-height: 40;
+}
+
+DatePicker, Spinner {
+    -fx-background-color: #fff;
+}
+
+DatePicker .arrow-button {
+    -fx-background-color: #fff;
+    -fx-font-size: 24px;
 }

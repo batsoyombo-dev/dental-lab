@@ -31,11 +31,14 @@ public class Registration {
     @DatabaseField(columnName = "work_type_id", canBeNull = false, foreign = true)
     private WorkType workType;
 
+    @DatabaseField(canBeNull = false)
+    private String teeth;
+
     public Registration() {
 
     }
 
-    public Registration(String id, String patientName, String date, String trialDate, String finishedDate, float charges, Doctor doctor, WorkType workType) {
+    public Registration(String id, String patientName, String date, String trialDate, String finishedDate, float charges, Doctor doctor, WorkType workType, String teeth) {
         this.id = id;
         this.patientName = patientName;
         this.date = date;
@@ -44,6 +47,15 @@ public class Registration {
         this.charges = charges;
         this.doctor = doctor;
         this.workType = workType;
+        this.teeth = teeth;
+    }
+
+    public String getTeeth() {
+        return teeth;
+    }
+
+    public void setTeeth(String teeth) {
+        this.teeth = teeth;
     }
 
     public String getId() {

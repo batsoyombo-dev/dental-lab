@@ -3,6 +3,7 @@ package com.dental.controllers.screens;
 import com.dental.dao.CrudDAO;
 import com.dental.models.Expenses;
 import com.dental.utils.Navigateable;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -67,9 +68,13 @@ public class DailyExpensesScreenController implements Initializable, Navigateabl
                 e.printStackTrace();
             }
         });
-
-        List<Expenses> expenses = this.crudDAO.list();
-        this.tv_expensesList.getItems().addAll(expenses);
+        Thread thread = new Thread(() -> {
+            Platform.runLater(() -> {
+                List<Expenses> expenses = this.crudDAO.list();
+                this.tv_expensesList.getItems().addAll(expenses);
+            });
+        });
+        thread.start();
     }
 
     public void handleUpdateExpenseClick(MouseEvent e) {

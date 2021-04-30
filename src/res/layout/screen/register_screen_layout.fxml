@@ -81,22 +81,6 @@
                                           <Insets left="10.0" />
                                        </HBox.margin>
                                     </Button>
-                                    <Button fx:id="Ubtn8" layoutX="20.0" layoutY="10.0" maxWidth="39.0" mnemonicParsing="false" onMouseClicked="#UonBtn" prefHeight="40.0" prefWidth="39.0" styleClass="btn" text="8" />
-                                    <Button fx:id="Ubtn7" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#UonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="7" />
-                                    <Button fx:id="Ubtn6" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#UonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="6" />
-                                    <Button fx:id="Ubtn5" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#UonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="5" />
-                                    <Button fx:id="Ubtn4" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#UonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="4" />
-                                    <Button fx:id="Ubtn3" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#UonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="3" />
-                                    <Button fx:id="Ubtn2" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#UonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="2" />
-                                    <Button fx:id="Ubtn1" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#UonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="1" />
-                                    <Button fx:id="Ubtn1_1" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#UonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="1" />
-                                    <Button fx:id="Ubtn2_2" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#UonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="2" />
-                                    <Button fx:id="Ubtn3_3" layoutX="76.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#UonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="3" />
-                                    <Button fx:id="Ubtn4_4" layoutX="132.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#UonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="4" />
-                                    <Button fx:id="Ubtn5_5" layoutX="160.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#UonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="5" />
-                                    <Button fx:id="Ubtn6_6" layoutX="188.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#UonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="6" />
-                                    <Button fx:id="Ubtn7_7" layoutX="188.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#UonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="7" />
-                                    <Button fx:id="Ubtn8_8" layoutX="216.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#UonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="8" />
                                  </children>
                               </HBox>
                               <HBox layoutX="10.0" layoutY="10.0" prefHeight="55.0" prefWidth="908.0" spacing="15.0">

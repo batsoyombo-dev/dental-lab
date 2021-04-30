@@ -19,6 +19,10 @@ public class WorkType {
     @DatabaseField(canBeNull = false, dataType = DataType.FLOAT)
     private float charge;
 
+    public WorkType() {
+
+    }
+
     public WorkType(String id, String work, String description, float charge) {
         this.id = id;
         this.work = work;
@@ -58,4 +62,8 @@ public class WorkType {
         this.charge = charge;
     }
 
+    @Override
+    public String toString() {
+        return this.work;
+    }
 }

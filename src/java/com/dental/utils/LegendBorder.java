@@ -11,8 +11,8 @@ public class LegendBorder extends StackPane {
 
     String rootStyle = "-fx-content-display: top;" +
             "-fx-padding: 20 16 16 16;" +
-            "-fx-border-width: 2;",
-            labelStyle = "-fx-translate-y: -28;" +
+            "-fx-border-width: 1;",
+            labelStyle = "-fx-translate-y: -32;" +
                     "-fx-padding: 0 5;";
 
     private final Label lbl_title;
@@ -22,7 +22,7 @@ public class LegendBorder extends StackPane {
         lbl_title = new Label();
         StackPane.setAlignment(lbl_title, Pos.TOP_LEFT);
         lbl_title.setStyle(labelStyle + "-fx-text-fill: #333;");
-        super.setStyle(rootStyle + "-fx-border-color: lightgrey;");
+        super.setStyle(rootStyle + "-fx-border-color: #333;");
         super.getChildren().add(lbl_title);
     }
 
