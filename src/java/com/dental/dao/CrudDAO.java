@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class CrudDAO<T> {
 
@@ -117,6 +118,15 @@ public class CrudDAO<T> {
             QueryBuilder<T, String> queryBuilder = dao.queryBuilder();
             queryBuilder.where().between(column, valueA, valueB);
             return queryBuilder.query();
+        } catch(SQLException | IOException e) {
+            return null;
+        }
+    }
+
+    public List<T> search(Map<String, Object> search) {
+        try (ConnectionSource con = DBConnection.getConnectionSource();) {
+            Dao<T, String> dao = DaoManager.createDao(con, this.cl);
+            return dao.queryForFieldValues(search);
         } catch(SQLException | IOException e) {
             return null;
         }

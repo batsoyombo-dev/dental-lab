@@ -1,0 +1,22 @@
+.lblSupp{
+    -fx-font-size: 20;
+}
+.otherbtn
+{
+    -fx-pref-height: 40;
+    -fx-pref-width: 130;
+    -fx-background-radius: 20;
+    -fx-font-size: 20;
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: black;
+    -fx-border-radius: 20;
+}
+.mainbtn{
+    -fx-background-color: #6C63FF;
+    -fx-text-fill: white;
+}
+.bodyClass
+{
+    -fx-background-color: white;
+}

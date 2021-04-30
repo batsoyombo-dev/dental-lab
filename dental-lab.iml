@@ -8,8 +8,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="javafx-swt" level="project" />
-    <orderEntry type="library" exported="" name="com.j256.ormlite:ormlite-jdbc:5.3" level="project" />
-    <orderEntry type="library" name="mysql:mysql-connector-java:8.0.24" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
+    <orderEntry type="library" name="com.j256.ormlite:ormlite-jdbc:5.3" level="project" />
+    <orderEntry type="library" name="mysql-connector-java-8.0.21" level="project" />
   </component>
 </module>

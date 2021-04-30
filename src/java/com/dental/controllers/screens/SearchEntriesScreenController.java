@@ -176,12 +176,14 @@ public class SearchEntriesScreenController implements Initializable, Navigateabl
         this.dp_regDateField.setValue(LocalDate.parse(this.chosenRegistration.getDate()));
         this.dp_finishedDate.setValue(LocalDate.parse(this.chosenRegistration.getFinishedDate()));
         this.dp_trialDate.setValue(LocalDate.parse(this.chosenRegistration.getTrialDate()));
+
         for (Doctor doctor : this.cb_doctors.getItems())
             if (doctor.getId().equals(this.chosenRegistration.getDoctor().getId()))
                 this.cb_doctors.setValue(doctor);
         for (WorkType workType : this.cb_workTypes.getItems())
             if (workType.getId().equals(this.chosenRegistration.getWorkType().getId()))
                 this.cb_workTypes.setValue(workType);
+
         this.chosenTeeth.addAll(Arrays.asList(this.chosenRegistration.getTeeth().split(",")));
         Scene scene = this.tv_searchResult.getScene();
         for (String tooth : chosenTeeth) {
