@@ -50,12 +50,39 @@
 
 }
 .mainbtn{
+  -fx-pref-height: 40;
+    -fx-pref-width: 170;
+    -fx-background-radius: 20;
+    -fx-font-size: 20;
     -fx-background-color: #6C63FF;
     -fx-text-fill: white;
 }
-.otherbtn{
+.labProfBtn{
+    -fx-pref-height: 40;
+    -fx-pref-width: 170;
+    -fx-background-radius: 20;
+    -fx-font-size: 20;
+}
+.createBtn{
+    -fx-background-color: #6C63FF;
+    -fx-text-fill: white;
+}
+.cancelBtn{
     -fx-background-color: white;
     -fx-text-fill: black;
     -fx-border-color: black;
     -fx-border-radius: 20;
+}
+.topLabel{
+    -fx-padding: 0px 0px 30px 0px;
+    -fx-font-size: 28;
+}
+.choiceBoxStyle
+{
+    -fx-font-size: 20;
+    -fx-border-color: black;
+    -fx-background-radius: 20px;
+    -fx-border-radius: 20px;
+    -fx-background-color: none;
+    -fx-pref-height: 40;
 }

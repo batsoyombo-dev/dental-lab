@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.collections.FXCollections?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import java.lang.String?>
+<?import java.lang.*?>
 <?import java.net.URL?>
-<?import javafx.scene.text.Text?>
-<?import javafx.scene.control.SpinnerValueFactory.LocalDateSpinnerValueFactory?>
 <ScrollPane>
     <content>
         <BorderPane styleClass="brdDocProf" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
@@ -15,38 +14,44 @@
                 <URL value="@../../css/screens/generate_invoice_screen_layout.css" />
             </stylesheets>
             <top>
-                <HBox spacing="600" styleClass="borderedBox" >
-                    <Label styleClass="topLabel" text="Generate Invoice" />
+                <HBox spacing="1230"  style="-fx-border-style: solid; -fx-border-width: 0 0 2 0;" BorderPane.alignment="CENTER">
+                    <Label styleClass="topLabel" text="Generate Bill" />
                     <VBox spacing="10" styleClass="header-text">
                         <Label text="Welcome: Root" />
                         <Label text="Today: 2021.12.12"/>
                     </VBox>
                 </HBox>
             </top>
+            <BorderPane.margin>
+                <Insets />
+            </BorderPane.margin>
             <center>
                 <VBox styleClass="borderedBox" spacing="12">
-                      <Label text="Generate Bills" styleClass="generateBill"/>
+                    <VBox minHeight="40" maxWidth="40">
+
+                    </VBox>
+
                     <!--        User selection            -->
                     <HBox styleClass="borderedBox" spacing="12">
-                        <Label text="Select Doctor: "/>
+                        <Label text="Select Doctor: " styleClass="topLabel"/>
 
-                        <ComboBox value="One">
+                        <ComboBox value="One" styleClass="choiceBoxStyle">
                             <items>
                                 <FXCollections fx:factory="observableArrayList">
-                                    <String fx:value="Dr Stone"/>
-                                    <String fx:value="Dr PlaceHolder"/>
-                                    <String fx:value="dR Star"/>
+                                    <String fx:value="Doctor 1 "/>
+                                    <String fx:value="Doctor 2 "/>
+                                    <String fx:value="Doctor 3 "/>
                                 </FXCollections>
                             </items>
                         </ComboBox>
-                        <Label text="Year: "/>
+                        <Label text="Year: " styleClass="topLabel"/>
                         <Spinner fx:id="yearSpinner" BorderPane.alignment="CENTER" styleClass=".nothing">
                             <valueFactory>
                                 <SpinnerValueFactory.IntegerSpinnerValueFactory min="1850" max="2022"/>
                             </valueFactory>
                         </Spinner>
-                        <Label text="Month:"/>
-                        <ComboBox styleClass="comboBox">
+                        <Label text="Month:" styleClass="topLabel"/>
+                        <ComboBox styleClass="choiceBoxStyle" >
                             <items>
                                 <FXCollections fx:factory="observableArrayList">
                                     <String fx:value="January"/>
@@ -62,7 +67,7 @@
                                 </FXCollections>
                             </items>
                         </ComboBox>
-                        <Button text="Generate"/>
+                        <Button text="Generate" styleClass="mainbtn"/>
                     </HBox>
                     <TableView styleClass="table" >
                         <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/></columnResizePolicy>
@@ -76,16 +81,14 @@
                         </columns>
                     </TableView>
                     <HBox spacing="8">
-                        <Button text="Save&amp;Print"/>
-                        <Label text="Total Rows"/>
+                        <Button text="Save&amp;Print " styleClass="labProfBtn"/>
+                        <Label text="Total Rows: " styleClass="topLabel"/>
                         <TextField/>
-                        <Label text="Total Amount"/>
+                        <Label text="Total Amount: " styleClass="topLabel"/>
                         <TextField/>
                     </HBox>
                 </VBox>
             </center>
-
-
         </BorderPane>
     </content>
 </ScrollPane>
