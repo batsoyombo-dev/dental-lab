@@ -1,0 +1,22 @@
+.otherbtn
+{
+    -fx-pref-height: 40;
+    -fx-pref-width: 200;
+    -fx-background-radius: 20;
+    -fx-font-size: 20;
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: black;
+    -fx-border-radius: 20;
+}
+.topLabel
+{
+    -fx-padding: 0px 0px 30px 0px;
+    -fx-font-size: 28;
+}
+.tab {
+
+    -fx-pref-width: 100;
+    -fx-pref-height: 30;
+    -fx-border-radius: 5px;
+}
