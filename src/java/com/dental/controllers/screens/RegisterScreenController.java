@@ -10,13 +10,11 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 
 import java.net.URL;
-import java.util.List;
-import java.util.Optional;
-import java.util.ResourceBundle;
-import java.util.UUID;
+import java.util.*;
 
 
 import javafx.scene.input.DragEvent;
@@ -24,6 +22,7 @@ import javafx.scene.input.MouseDragEvent;
 import javafx.scene.input.MouseEvent;
 
 public class RegisterScreenController implements Initializable, Navigateable {
+
 
     private CrudDAO<Registration> crudDAO;
     private CrudDAO<Doctor> crudDAODoctor;
@@ -42,8 +41,8 @@ public class RegisterScreenController implements Initializable, Navigateable {
     private float charges ;
     private String doctor_id ;
     private String work_type_id ;
-
-
+    private List<String> chosenTeeth;
+    private List<Button> buttons;
     @FXML
     private ComboBox<String> choiceDoctor;
 
@@ -54,9 +53,107 @@ public class RegisterScreenController implements Initializable, Navigateable {
     private TextField JobNo;
 
     @FXML
+    private TextField patientN;
+
+    @FXML
     private DatePicker dateP;
     @FXML
-    private TextField patientN;
+    private Button UL8;
+
+
+    @FXML
+    private Button UL7;
+
+    @FXML
+    private Button UL6;
+
+    @FXML
+    private Button UL5;
+
+    @FXML
+    private Button UL4;
+
+    @FXML
+    private Button UL3;
+
+    @FXML
+    private Button UL2;
+
+    @FXML
+    private Button UL1;
+
+    @FXML
+    private Button UR1;
+
+    @FXML
+    private Button UR2;
+
+    @FXML
+    private Button UR3;
+
+    @FXML
+    private Button UR4;
+
+    @FXML
+    private Button UR5;
+
+    @FXML
+    private Button UR6;
+
+    @FXML
+    private Button UR7;
+
+    @FXML
+    private Button UR8;
+
+    @FXML
+    private Button LL8;
+
+    @FXML
+    private Button LL7;
+
+    @FXML
+    private Button LL6;
+
+    @FXML
+    private Button LL5;
+
+    @FXML
+    private Button LL4;
+
+    @FXML
+    private Button LL3;
+
+    @FXML
+    private Button LL2;
+
+    @FXML
+    private Button LL1;
+
+    @FXML
+    private Button LR1;
+
+    @FXML
+    private Button LR2;
+
+    @FXML
+    private Button LR3;
+
+    @FXML
+    private Button LR4;
+
+    @FXML
+    private Button LR5;
+
+    @FXML
+    private Button LR6;
+
+    @FXML
+    private Button LR7;
+
+    @FXML
+    private Button LR8;
+
     @FXML
     private TextField extraChar;
 
@@ -69,101 +166,6 @@ public class RegisterScreenController implements Initializable, Navigateable {
     @FXML
     private DatePicker FinishedD;
 
-    @FXML
-    private Button Ubtn8;
-
-    @FXML
-    private Button Ubtn7;
-
-    @FXML
-    private Button Ubtn6;
-
-    @FXML
-    private Button Ubtn5;
-
-    @FXML
-    private Button Ubtn4;
-
-    @FXML
-    private Button Ubtn3;
-
-    @FXML
-    private Button Ubtn2;
-
-    @FXML
-    private Button Ubtn1;
-
-    @FXML
-    private Button Ubtn1_1;
-
-    @FXML
-    private Button Ubtn2_2;
-
-    @FXML
-    private Button Ubtn3_3;
-
-    @FXML
-    private Button Ubtn4_4;
-
-    @FXML
-    private Button Ubtn5_5;
-
-    @FXML
-    private Button Ubtn6_6;
-
-    @FXML
-    private Button Ubtn7_7;
-
-    @FXML
-    private Button Ubtn8_8;
-    @FXML
-    private Button Lbtn8;
-
-    @FXML
-    private Button Lbtn7;
-
-    @FXML
-    private Button Lbtn6;
-
-    @FXML
-    private Button Lbtn5;
-
-    @FXML
-    private Button Lbtn4;
-
-    @FXML
-    private Button Lbtn3;
-
-    @FXML
-    private Button Lbtn2;
-
-    @FXML
-    private Button Lbtn1;
-
-    @FXML
-    private Button Lbtn1_1;
-
-    @FXML
-    private Button Lbtn2_2;
-
-    @FXML
-    private Button Lbtn3_3;
-
-    @FXML
-    private Button Lbtn4_4;
-
-    @FXML
-    private Button Lbtn5_5;
-
-    @FXML
-    private Button Lbtn6_6;
-
-    @FXML
-    private Button Lbtn7_7;
-
-    @FXML
-    private Button Lbtn8_8;
-
     ObservableList<String> teethList = FXCollections.observableArrayList();
 
     public RegisterScreenController()
@@ -171,6 +173,8 @@ public class RegisterScreenController implements Initializable, Navigateable {
         this.crudDAO = new CrudDAO<>(Registration.class);
         this.crudDAODoctor = new CrudDAO<>(Doctor.class);
         this.crudDAOWorkType = new CrudDAO<>(WorkType.class);
+        this.chosenTeeth = new ArrayList<>();
+        this.buttons = new ArrayList<>();
     }
 
     @Override
@@ -212,169 +216,34 @@ public class RegisterScreenController implements Initializable, Navigateable {
         }
     }
     @FXML
-    void LonBtn(MouseEvent event)
+    void handleTeethSelectionClick(MouseEvent event)
     {
-
-        if(event.getSource() == Lbtn1 )
-        {
-            removeAndAdd(Lbtn1);
-        }
-        else if (event.getSource()==Lbtn2)
-        {
-            removeAndAdd(Lbtn2);
-        }
-        else if (event.getSource()==Lbtn3)
-        {
-            removeAndAdd(Lbtn3);
-        }
-        else if (event.getSource()==Lbtn4)
-        {
-            removeAndAdd(Lbtn4);
-        }
-        else if (event.getSource()==Lbtn5)
-        {
-            removeAndAdd(Lbtn5);
-        }
-        else if (event.getSource()==Lbtn6)
-        {
-            removeAndAdd(Lbtn6);
-        }
-        else if (event.getSource()==Lbtn7)
-        {
-            removeAndAdd(Lbtn7);
-        }
-        else if (event.getSource()==Lbtn8)
-        {
-            removeAndAdd(Lbtn8);
-        }
-        else if (event.getSource()==Lbtn1_1)
-        {
-            removeAndAdd(Lbtn1_1);
-        }
-        else if (event.getSource()==Lbtn2_2)
-        {
-            removeAndAdd(Lbtn2_2);
-        }
-        else if (event.getSource()==Lbtn3_3)
-        {
-            removeAndAdd(Lbtn3_3);
-        }
-        else if (event.getSource()==Lbtn4_4)
-        {
-            removeAndAdd(Lbtn4_4);
-        }
-        else if (event.getSource()==Lbtn5_5)
-        {
-            removeAndAdd(Lbtn5_5);
-        }
-        else if (event.getSource()==Lbtn6_6)
-        {
-            removeAndAdd(Lbtn6_6);
-        }
-        else if (event.getSource()==Lbtn7_7)
-        {
-            removeAndAdd(Lbtn7_7);
-        }
-        else if (event.getSource()==Lbtn8_8)
-        {
-            removeAndAdd(Lbtn8_8);
+        Button button = ((Button)event.getSource());
+        ObservableList<String> styleClass = button.getStyleClass();
+        buttons.add(button);
+        if (styleClass.contains("selected")) {
+            this.chosenTeeth.remove(button.getId());
+            styleClass.remove("selected");
+        } else {
+            this.chosenTeeth.add(button.getId());
+            styleClass.add("selected");
         }
     }
-    @FXML
-    void UonBtn(MouseEvent event)
-    {
 
-        if(event.getSource() == Ubtn1 )
-        {
-            removeAndAdd(Ubtn1);
-        }
-        else if (event.getSource()==Ubtn2)
-        {
-            removeAndAdd(Ubtn2);
-        }
-        else if (event.getSource()==Ubtn3)
-        {
-            removeAndAdd(Ubtn3);
-        }
-        else if (event.getSource()==Ubtn4)
-        {
-            removeAndAdd(Ubtn4);
-        }
-        else if (event.getSource()==Ubtn5)
-        {
-            removeAndAdd(Ubtn5);
-        }
-        else if (event.getSource()==Ubtn6)
-        {
-            removeAndAdd(Ubtn6);
-        }
-        else if (event.getSource()==Ubtn7)
-        {
-            removeAndAdd(Ubtn7);
-        }
-        else if (event.getSource()==Ubtn8)
-        {
-            removeAndAdd(Ubtn8);
-        }
-        else if (event.getSource()==Ubtn1_1)
-        {
-            removeAndAdd(Ubtn1_1);
-        }
-        else if (event.getSource()==Ubtn2_2)
-        {
-            removeAndAdd(Ubtn2_2);
-        }
-        else if (event.getSource()==Ubtn3_3)
-        {
-            removeAndAdd(Ubtn3_3);
-        }
-        else if (event.getSource()==Ubtn4_4)
-        {
-            removeAndAdd(Ubtn4_4);
-        }
-        else if (event.getSource()==Ubtn5_5)
-        {
-            removeAndAdd(Ubtn5_5);
-        }
-        else if (event.getSource()==Ubtn6_6)
-        {
-            removeAndAdd(Ubtn6_6);
-        }
-        else if (event.getSource()==Ubtn7_7)
-        {
-            removeAndAdd(Ubtn7_7);
-        }
-        else if (event.getSource()==Ubtn8_8)
-        {
-            removeAndAdd(Ubtn8_8);
-        }
 
-    }
 
-    void removeAndAdd(Button button)
-    {
 
-        int i;
-        boolean a = true;
-        for (i = 0; i<=teethList.size()-1; i++)
-        {
-            if (teethList.get(i).equals(button+""))
-            {
-                a = false;
-                button.getStyleClass().remove("mainbtn");
-                teethList.remove(button+"");
-            }
-        }
-        if(i==0 || a)
-        {
-            button.getStyleClass().add("mainbtn");
-            teethList.add(button+"");
-        }
-
-    }
     @FXML
     void cancel()
     {
+        int i=0;
+        for (String tooth : this.chosenTeeth)
+        {
+            buttons.get(i).setId("#" + tooth);
+            buttons.get(i).getStyleClass().remove("selected");
+            i++;
+        }
+        this.chosenTeeth.clear();
         JobNo.clear();
         FinishedD.getEditor().clear();
         dateP.getEditor().clear();
@@ -388,11 +257,10 @@ public class RegisterScreenController implements Initializable, Navigateable {
     @FXML
     void newEntry(ActionEvent event)
     {
-
         if(check())
         {
             this.getValues();
-            Registration registration = new Registration(UUID.randomUUID().toString(),patient_name,date,trial_date,finished_date,charges,doctor,workType);
+            Registration registration = new Registration(UUID.randomUUID().toString(), patient_name, date, trial_date, finished_date, workType.getCharge(), doctor, workType, String.join(",", this.chosenTeeth));
             if(crudDAO.create(registration))
             {
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
@@ -401,10 +269,10 @@ public class RegisterScreenController implements Initializable, Navigateable {
                 Optional<ButtonType> result = alert.showAndWait();
                 if (result.isPresent() && result.get() == ButtonType.OK ||  result.get() == ButtonType.CANCEL)
                 {
-                    JobNo.clear();
+//                    JobNo.clear();
                     FinishedD.getEditor().clear();
-                    dateP.getEditor().clear();
-                    patientN.clear();
+//                    dateP.getEditor().clear();
+//                    patientN.clear();
                     extraChar.clear();
                     TotalC.clear();
                     TrialD.getEditor().clear();
@@ -428,7 +296,6 @@ public class RegisterScreenController implements Initializable, Navigateable {
         finished_date = String.valueOf(dateP.getValue());
         charges = Float.parseFloat(TotalC.getText()) ;
         work_type_id = JobNo.getText();
-        System.out.println(choiceDoctor.getValue());
         for (int i =0; i<=doctorList.size()-1; i++)
         {
             if (doctorList.get(i).getName().equals(choiceDoctor.getValue()))
