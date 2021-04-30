@@ -6,89 +6,55 @@
 <?import javafx.scene.layout.*?>
 <?import java.lang.*?>
 <?import java.net.URL?>
+
 <ScrollPane>
-    <content>
-        <BorderPane styleClass="brdDocProf" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
-            <stylesheets>
-                <URL value="@../../css/global.css" />
-                <URL value="@../../css/screens/generate_invoice_screen_layout.css" />
-            </stylesheets>
-            <top>
-                <HBox spacing="1230"  style="-fx-border-style: solid; -fx-border-width: 0 0 2 0;" BorderPane.alignment="CENTER">
-                    <Label styleClass="topLabel" text="Generate Bill" />
-                    <VBox spacing="10" styleClass="header-text">
-                        <Label text="Welcome: Root" />
-                        <Label text="Today: 2021.12.12"/>
-                    </VBox>
+    <BorderPane styleClass="brdDocProf" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" style="-fx-background-color: #fff">
+        <stylesheets>
+            <URL value="@../../css/global.css"/>
+            <URL value="@../../css/screens/generate_invoice_screen_layout.css"/>
+        </stylesheets>
+        <top>
+            <HBox styleClass="header-container">
+                <Label styleClass="topLabel" text="Search Entries" />
+            </HBox>
+        </top>
+        <BorderPane.margin>
+            <Insets/>
+        </BorderPane.margin>
+        <center>
+            <VBox style="-fx-padding: 30px 0" spacing="12">
+                <HBox spacing="20">
+                    <HBox spacing="5" alignment="CENTER">
+                        <Label text="Select Doctor: " />
+                        <ChoiceBox fx:id="cb_doctors" styleClass="choiceBoxStyle" />
+                    </HBox>
+                    <HBox spacing="5" alignment="CENTER">
+                        <Label text="Select date:" />
+                        <DatePicker fx:id="dp_dateField" />
+                    </HBox>
+                    <Button text="Generate" styleClass="mainbtn" onMouseClicked="#handleGenerateBtnClick"/>
                 </HBox>
-            </top>
-            <BorderPane.margin>
-                <Insets />
-            </BorderPane.margin>
-            <center>
-                <VBox styleClass="borderedBox" spacing="12">
-                    <VBox minHeight="40" maxWidth="40">
-
-                    </VBox>
-
-                    <!--        User selection            -->
-                    <HBox styleClass="borderedBox" spacing="12">
-                        <Label text="Select Doctor: " styleClass="topLabel"/>
-
-                        <ComboBox value="One" styleClass="choiceBoxStyle">
-                            <items>
-                                <FXCollections fx:factory="observableArrayList">
-                                    <String fx:value="Doctor 1 "/>
-                                    <String fx:value="Doctor 2 "/>
-                                    <String fx:value="Doctor 3 "/>
-                                </FXCollections>
-                            </items>
-                        </ComboBox>
-                        <Label text="Year: " styleClass="topLabel"/>
-                        <Spinner fx:id="yearSpinner" BorderPane.alignment="CENTER" styleClass=".nothing">
-                            <valueFactory>
-                                <SpinnerValueFactory.IntegerSpinnerValueFactory min="1850" max="2022"/>
-                            </valueFactory>
-                        </Spinner>
-                        <Label text="Month:" styleClass="topLabel"/>
-                        <ComboBox styleClass="choiceBoxStyle" >
-                            <items>
-                                <FXCollections fx:factory="observableArrayList">
-                                    <String fx:value="January"/>
-                                    <String fx:value="February"/>
-                                    <String fx:value="April"/>
-                                    <String fx:value="May"/>
-                                    <String fx:value="July"/>
-                                    <String fx:value="August"/>
-                                    <String fx:value="September"/>
-                                    <String fx:value="October"/>
-                                    <String fx:value="November"/>
-                                    <String fx:value="December"/>
-                                </FXCollections>
-                            </items>
-                        </ComboBox>
-                        <Button text="Generate" styleClass="mainbtn"/>
-                    </HBox>
-                    <TableView styleClass="table" >
-                        <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/></columnResizePolicy>
-                        <columns>
-                            <TableColumn text="Inward No."  />
-                            <TableColumn text="Entry Date" />
-                            <TableColumn text="Patient Name" />
-                            <TableColumn text="Doctor Name"  />
-                            <TableColumn text="Delivery Name" />
-                            <TableColumn text="Total charges" />
-                        </columns>
-                    </TableView>
-                    <HBox spacing="8">
-                        <Button text="Save&amp;Print " styleClass="labProfBtn"/>
-                        <Label text="Total Rows: " styleClass="topLabel"/>
-                        <TextField/>
-                        <Label text="Total Amount: " styleClass="topLabel"/>
-                        <TextField/>
-                    </HBox>
-                </VBox>
-            </center>
-        </BorderPane>
-    </content>
+                <TableView styleClass="table" fx:id="tv_generateResult">
+                    <columnResizePolicy>
+                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                    </columnResizePolicy>
+                    <columns>
+                        <TableColumn fx:id="tc_regIdColumn" text="Inward No" />
+                        <TableColumn fx:id="tc_regFateColumn" text="Entry Date" />
+                        <TableColumn fx:id="tc_regPatientNameColumn" text="Patient Name" />
+                        <TableColumn fx:id="tc_regDoctorIdColumn" text="Doctor Id" />
+                        <TableColumn fx:id="tc_regFinishedDateColumn" text="Finished Date"/>
+                        <TableColumn fx:id="tc_regTotalChargesColumn" text="Total charges"/>
+                    </columns>
+                </TableView>
+                <HBox spacing="8">
+                    <Button text="Save&amp;Print " onMouseClicked="#handleSaveInvoiceBtnClick" styleClass="labProfBtn"/>
+                    <Label text="Total Rows: " />
+                    <TextField/>
+                    <Label text="Total Amount: " />
+                    <TextField/>
+                </HBox>
+            </VBox>
+        </center>
+    </BorderPane>
 </ScrollPane>
