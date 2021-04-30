@@ -4,6 +4,7 @@ import com.dental.dao.CrudDAO;
 import com.dental.models.Doctor;
 import com.dental.models.Registration;
 import com.dental.utils.Navigateable;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -60,6 +61,8 @@ public class TodayDeliveryScreenController implements Initializable, Navigateabl
 
     @FXML
     private TableColumn<Registration, String> WorkTypeID;
+    @FXML
+    private TableColumn<Registration, String> Teeth;
 
     private List<Registration> registrationsList;
     private CrudDAO<Registration> crudDAO;
@@ -68,14 +71,16 @@ public class TodayDeliveryScreenController implements Initializable, Navigateabl
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
         datePicker.setValue(LOCAL_DATE(date));
-        InwardNo.setCellValueFactory(new PropertyValueFactory<Registration, String>("id"));
-        PatientName.setCellValueFactory(new PropertyValueFactory<Registration, String>("patientName"));
-        DateP.setCellValueFactory(new PropertyValueFactory<Registration, String>("date"));
-        trialDate.setCellValueFactory(new PropertyValueFactory<Registration, String>("trialDate"));
-        FinishDate.setCellValueFactory(new PropertyValueFactory<Registration, String>("finishedDate"));
-        charges.setCellValueFactory(new PropertyValueFactory<Registration, Float>("charges"));
-        DoctorID.setCellValueFactory(new PropertyValueFactory<Registration, String>("doctor"));
-        WorkTypeID.setCellValueFactory(new PropertyValueFactory<Registration, String>("workType"));
+        this.InwardNo.setCellValueFactory(new PropertyValueFactory<>("id"));
+        this.PatientName.setCellValueFactory(new PropertyValueFactory<>("patientName"));
+        this.DateP.setCellValueFactory(new PropertyValueFactory<>("date"));
+        this.trialDate.setCellValueFactory(new PropertyValueFactory<>("trialDate"));
+        this.FinishDate.setCellValueFactory(new PropertyValueFactory<>("finishedDate"));
+        this.charges.setCellValueFactory(new PropertyValueFactory<>("charges"));
+        this.DoctorID.setCellValueFactory(val -> new SimpleStringProperty(val.getValue().getDoctor().getId()));
+        this.WorkTypeID.setCellValueFactory(val -> new SimpleStringProperty(val.getValue().getWorkType().getId()));
+        this.Teeth.setCellValueFactory(new PropertyValueFactory<>("teeth"));
+
 
         registrationsList = crudDAO.search("finished_date",date);
         myTable.getItems().addAll(registrationsList);

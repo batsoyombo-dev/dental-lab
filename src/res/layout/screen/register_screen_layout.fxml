@@ -53,62 +53,57 @@
                <children>
                   <AnchorPane prefHeight="304.0" prefWidth="922.0">
                      <children>
-                        <VBox layoutY="14.0" prefHeight="90.0" prefWidth="929.0" spacing="15.0">
-                           <children>
-                              <HBox prefHeight="46.0" prefWidth="445.0" spacing="20.0">
-                                 <children>
-                                    <Label alignment="BOTTOM_LEFT" prefHeight="34.0" prefWidth="118.0" styleClass="lblSupp" text="Work Type">
-                                       <padding>
-                                          <Insets left="10.0" />
-                                       </padding>
-                                    </Label>
-                                    <ComboBox fx:id="choiceWorkType" onAction="#WorkTypeChoiseBox" prefWidth="265.0" styleClass="choiceBoxStyle" />
-                                 </children>
+                        <VBox layoutX="6.0" layoutY="9.0" prefHeight="254.0" prefWidth="920.0" spacing="20.0">
+                           <HBox prefHeight="76.0" prefWidth="896.0" styleClass="form-group">
+                              <Label text="Work Type" />
+                              <ComboBox fx:id="choiceWorkType" onAction="#WorkTypeChoiseBox" prefWidth="275.0" styleClass="choiceBoxStyle" />
+                           </HBox>
+                           <HBox spacing="20">
+                              <Button mnemonicParsing="false" styleClass="teeth-btn, non-teeth" text="U" />
+                              <HBox spacing="5">
+                                 <Button id="UL8" fx:id="UL8" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="8" />
+                                 <Button id="UL7" fx:id="UL7" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="7" />
+                                 <Button id="UL6" fx:id="UL6" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="6" />
+                                 <Button id="UL5" fx:id="UL5" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="5" />
+                                 <Button id="UL4" fx:id="UL4" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="4" />
+                                 <Button id="UL3" fx:id="UL3" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="3" />
+                                 <Button id="UL2" fx:id="UL2" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="2" />
+                                 <Button id="UL1" fx:id="UL1" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="1" />
                               </HBox>
-                              <Label styleClass="lblSupp" text="Region">
-                                 <VBox.margin>
-                                    <Insets left="10.0" />
-                                 </VBox.margin>
-                              </Label>
-                           </children>
-                        </VBox>
-                        <VBox layoutY="113.0" prefHeight="147.0" prefWidth="925.0" spacing="20.0">
-                           <children>
-                              <HBox prefHeight="55.0" prefWidth="908.0" spacing="15.0">
-                                 <children>
-                                    <Button maxHeight="59.0" maxWidth="49.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="77.0" styleClass="btn1" text="U">
-                                       <HBox.margin>
-                                          <Insets left="10.0" />
-                                       </HBox.margin>
-                                    </Button>
-                                 </children>
+                              <HBox spacing="5">
+                                 <Button id="UR1" fx:id="UR1" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="1" />
+                                 <Button id="UR2" fx:id="UR2" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="2" />
+                                 <Button id="UR3" fx:id="UR3" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="3" />
+                                 <Button id="UR4" fx:id="UR4" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="4" />
+                                 <Button id="UR5" fx:id="UR5" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="5" />
+                                 <Button id="UR6" fx:id="UR6" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="6" />
+                                 <Button id="UR7" fx:id="UR7" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="7" />
+                                 <Button id="UR8" fx:id="UR8" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="8" />
                               </HBox>
-                              <HBox layoutX="10.0" layoutY="10.0" prefHeight="55.0" prefWidth="908.0" spacing="15.0">
-                                 <children>
-                                    <Button maxHeight="59.0" maxWidth="49.0" mnemonicParsing="false" prefHeight="59.0" prefWidth="77.0" styleClass="btn1" text="L">
-                                       <HBox.margin>
-                                          <Insets left="10.0" />
-                                       </HBox.margin>
-                                    </Button>
-                                    <Button fx:id="Lbtn8" layoutX="20.0" layoutY="10.0" maxWidth="39.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="40.0" prefWidth="39.0" styleClass="btn" text="8" />
-                                    <Button fx:id="Lbtn7" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="7" />
-                                    <Button fx:id="Lbtn6" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="6" />
-                                    <Button fx:id="Lbtn5" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="5" />
-                                    <Button fx:id="Lbtn4" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="4" />
-                                    <Button fx:id="Lbtn3" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="3" />
-                                    <Button fx:id="Lbtn2" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="2" />
-                                    <Button fx:id="Lbtn1" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="1" />
-                                    <Button fx:id="Lbtn1_1" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="1" />
-                                    <Button fx:id="Lbtn2_2" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="2" />
-                                    <Button fx:id="Lbtn3_3" layoutX="76.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="3" />
-                                    <Button fx:id="Lbtn4_4" layoutX="132.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="4" />
-                                    <Button fx:id="Lbtn5_5" layoutX="160.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="5" />
-                                    <Button fx:id="Lbtn6_6" layoutX="188.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="6" />
-                                    <Button fx:id="Lbtn7_7" layoutX="188.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="7" />
-                                    <Button fx:id="Lbtn8_8" layoutX="216.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="8" />
-                                 </children>
+                           </HBox>
+                           <HBox spacing="20">
+                              <Button mnemonicParsing="false" styleClass="teeth-btn, non-teeth" text="L" />
+                              <HBox spacing="5">
+                                 <Button id="LL8" fx:id="LL8" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="8" />
+                                 <Button id="LL7" fx:id="LL7" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="7" />
+                                 <Button id="LL6" fx:id="LL6" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="6" />
+                                 <Button id="LL5" fx:id="LL5" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="5" />
+                                 <Button id="LL4" fx:id="LL4" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="4" />
+                                 <Button id="LL3" fx:id="LL3" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="3" />
+                                 <Button id="LL2" fx:id="LL2" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="2" />
+                                 <Button id="LL1" fx:id="LL1" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="1" />
                               </HBox>
-                           </children>
+                              <HBox spacing="5">
+                                 <Button id="LR1" fx:id="LR1" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="1" />
+                                 <Button id="LR2" fx:id="LR2" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="2" />
+                                 <Button id="LR3" fx:id="LR3" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="3" />
+                                 <Button id="LR4" fx:id="LR4" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="4" />
+                                 <Button id="LR5" fx:id="LR5" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="5" />
+                                 <Button id="LR6" fx:id="LR6" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="6" />
+                                 <Button id="LR7" fx:id="LR7" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="7" />
+                                 <Button id="LR8" fx:id="LR8" mnemonicParsing="false" onMouseClicked="#handleTeethSelectionClick" styleClass="teeth-btn" text="8" />
+                              </HBox>
+                           </HBox>
                         </VBox>
                         <Label style="-fx-background-color: white;" styleClass="lblSupp" text="Teeth Selection" translateX="30.0" translateY="-15.0" />
                      </children>
@@ -167,5 +162,6 @@
    <stylesheets>
       <URL value="@../../css/screens/register_screen_layout.css" />
       <URL value="@../../css/global.css" />
+      <URL value="@../../css/screens/search_entries_screen_layout.css" />
    </stylesheets>
 </BorderPane>

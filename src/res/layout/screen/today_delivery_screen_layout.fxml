@@ -50,16 +50,17 @@
                   </HBox>
                </children>
             </VBox>
-            <TableView fx:id="myTable" layoutX="31.0" layoutY="169.0" prefHeight="597.0" prefWidth="849.0">
+            <TableView fx:id="myTable" layoutX="31.0" layoutY="169.0" prefHeight="635.0" prefWidth="952.0">
               <columns>
                 <TableColumn fx:id="InwardNo" prefWidth="75.0" text="Inward No " />
                 <TableColumn fx:id="PatientName" prefWidth="75.0" text="Patient_name" />
-                  <TableColumn fx:id="DateP" prefWidth="75.0" text="Date" />
-                  <TableColumn fx:id="trialDate" prefWidth="75.0" text="Trial_date" />
-                  <TableColumn fx:id="FinishDate" prefWidth="75.0" text="Finished date" />
+                  <TableColumn fx:id="DateP" prefWidth="89.66668701171875" text="Date" />
+                  <TableColumn fx:id="trialDate" prefWidth="74.0" text="Trial_date" />
+                  <TableColumn fx:id="FinishDate" prefWidth="137.0" text="Finished date" />
                   <TableColumn fx:id="charges" prefWidth="75.0" text="Charges" />
                   <TableColumn fx:id="DoctorID" prefWidth="75.0" text="Doctor id" />
                   <TableColumn fx:id="WorkTypeID" prefWidth="75.0" text="Work type id" />
+                  <TableColumn fx:id="Teeth" prefWidth="75.0" text="Teeth" />
               </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
