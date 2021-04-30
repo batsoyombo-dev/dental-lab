@@ -389,34 +389,34 @@ public class RegisterScreenController implements Initializable, Navigateable {
     void newEntry(ActionEvent event)
     {
 
-        if(check())
-        {
-            this.getValues();
-            Registration registration = new Registration(UUID.randomUUID().toString(),patient_name,date,trial_date,finished_date,charges,doctor,workType);
-            if(crudDAO.create(registration))
-            {
-                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                alert.setTitle("Амжилтай");
-                alert.setHeaderText("Амжилтай боллоо :D");
-                Optional<ButtonType> result = alert.showAndWait();
-                if (result.isPresent() && result.get() == ButtonType.OK ||  result.get() == ButtonType.CANCEL)
-                {
-                    JobNo.clear();
-                    FinishedD.getEditor().clear();
-                    dateP.getEditor().clear();
-                    patientN.clear();
-                    extraChar.clear();
-                    TotalC.clear();
-                    TrialD.getEditor().clear();
-                }
-            }
-            else
-            {
-                Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Алдаа ");
-                alert.setHeaderText("Алдаа гарлаа ");
-            }
-        }
+//        if(check())
+//        {
+//            this.getValues();
+//            Registration registration = new Registration(UUID.randomUUID().toString(),patient_name,date,trial_date,finished_date,charges,doctor,workType);
+//            if(crudDAO.create(registration))
+//            {
+//                Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+//                alert.setTitle("Амжилтай");
+//                alert.setHeaderText("Амжилтай боллоо :D");
+//                Optional<ButtonType> result = alert.showAndWait();
+//                if (result.isPresent() && result.get() == ButtonType.OK ||  result.get() == ButtonType.CANCEL)
+//                {
+//                    JobNo.clear();
+//                    FinishedD.getEditor().clear();
+//                    dateP.getEditor().clear();
+//                    patientN.clear();
+//                    extraChar.clear();
+//                    TotalC.clear();
+//                    TrialD.getEditor().clear();
+//                }
+//            }
+//            else
+//            {
+//                Alert alert = new Alert(Alert.AlertType.ERROR);
+//                alert.setTitle("Алдаа ");
+//                alert.setHeaderText("Алдаа гарлаа ");
+//            }
+//        }
 
     }
 
