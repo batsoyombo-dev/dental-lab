@@ -4,7 +4,7 @@
 <?import java.net.URL?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -25,34 +25,28 @@
    <center>
       <AnchorPane prefHeight="689.0" prefWidth="952.0" styleClass="bodyBorder" BorderPane.alignment="CENTER">
          <children>
-            <HBox layoutX="14.0" layoutY="30.0" prefHeight="46.0" prefWidth="234.0" spacing="20.0">
+            <HBox layoutX="22.0" layoutY="30.0" prefHeight="46.0" prefWidth="448.0" spacing="20.0">
                <children>
-                  <Label alignment="BOTTOM_LEFT" prefHeight="34.0" prefWidth="136.0" styleClass="lblSupp" text="Inward No.:" />
-                  <TextField maxHeight="40.0" prefHeight="23.0" prefWidth="118.0" styleClass="text-field1" />
-               </children>
-            </HBox>
-            <HBox layoutX="264.0" layoutY="30.0" prefHeight="46.0" prefWidth="234.0" spacing="20.0">
-               <children>
-                  <Label alignment="BOTTOM_LEFT" prefHeight="34.0" prefWidth="136.0" styleClass="lblSupp" text="Inward No:" />
-                  <TextField maxHeight="10.0" prefHeight="23.0" prefWidth="133.0" styleClass="text-field1" />
+                  <Label alignment="BOTTOM_LEFT" prefHeight="34.0" prefWidth="136.0" styleClass="lblSupp" text="Job No:" />
+                  <TextField fx:id="JobNo" maxHeight="40.0" prefHeight="23.0" prefWidth="317.0" styleClass="text-field1" />
                </children>
             </HBox>
             <HBox layoutX="667.0" layoutY="30.0" prefHeight="46.0" prefWidth="252.0" spacing="20.0">
                <children>
                   <Label alignment="BOTTOM_LEFT" prefHeight="34.0" prefWidth="136.0" styleClass="lblSupp" text="Date:" />
-                  <DatePicker prefHeight="40.0" prefWidth="272.0" />
+                  <DatePicker fx:id="dateP" prefHeight="40.0" prefWidth="272.0" />
                </children>
             </HBox>
             <HBox layoutX="14.0" layoutY="101.0" prefHeight="43.0" prefWidth="469.0" spacing="20.0">
                <children>
                   <Label alignment="BOTTOM_LEFT" prefHeight="34.0" prefWidth="130.0" styleClass="lblSupp" text="Doctor:" />
-                  <ChoiceBox prefWidth="344.0" styleClass="choiceBoxStyle" />
+                  <ComboBox fx:id="choiceDoctor" prefWidth="319.0" styleClass="choiceBoxStyle" />
                </children>
             </HBox>
             <HBox layoutX="500.0" layoutY="101.0" prefHeight="46.0" prefWidth="445.0" spacing="20.0">
                <children>
                   <Label alignment="BOTTOM_LEFT" prefHeight="34.0" prefWidth="130.0" styleClass="lblSupp" text="Patient Name:" />
-                  <TextField prefWidth="283.0" />
+                  <TextField fx:id="patientN" prefWidth="283.0" />
                </children>
             </HBox>
             <StackPane layoutX="14.0" layoutY="180.0" prefHeight="279.0" prefWidth="932.0" style="-fx-border-color: black; -fx-border-radius: 20;">
@@ -68,7 +62,7 @@
                                           <Insets left="10.0" />
                                        </padding>
                                     </Label>
-                                    <ChoiceBox prefWidth="209.0" styleClass="choiceBoxStyle" />
+                                    <ComboBox fx:id="choiceWorkType" onAction="#WorkTypeChoiseBox" prefWidth="265.0" styleClass="choiceBoxStyle" />
                                  </children>
                               </HBox>
                               <Label styleClass="lblSupp" text="Region">
@@ -87,22 +81,6 @@
                                           <Insets left="10.0" />
                                        </HBox.margin>
                                     </Button>
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="39.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="39.0" styleClass="btn" text="8" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="7" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="6" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="5" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="4" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="3" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="2" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="1" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="1" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="2" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="3" />
-                                    <Button layoutX="132.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="4" />
-                                    <Button layoutX="160.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="5" />
-                                    <Button layoutX="188.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="6" />
-                                    <Button layoutX="188.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="7" />
-                                    <Button layoutX="216.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="8" />
                                  </children>
                               </HBox>
                               <HBox layoutX="10.0" layoutY="10.0" prefHeight="55.0" prefWidth="908.0" spacing="15.0">
@@ -112,27 +90,22 @@
                                           <Insets left="10.0" />
                                        </HBox.margin>
                                     </Button>
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="39.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="39.0" styleClass="btn" text="8" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" text="7">
-                                       <styleClass>
-                                          <String fx:value="btn" />
-                                          <String fx:value="mainbtn" />
-                                       </styleClass>
-                                    </Button>
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="6" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="5" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="4" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="3" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="2" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="1" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="1" />
-                                    <Button layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="2" />
-                                    <Button layoutX="76.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="3" />
-                                    <Button layoutX="132.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="4" />
-                                    <Button layoutX="160.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="5" />
-                                    <Button layoutX="188.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="6" />
-                                    <Button layoutX="188.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="7" />
-                                    <Button layoutX="216.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="8" />
+                                    <Button fx:id="Lbtn8" layoutX="20.0" layoutY="10.0" maxWidth="39.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="40.0" prefWidth="39.0" styleClass="btn" text="8" />
+                                    <Button fx:id="Lbtn7" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="7" />
+                                    <Button fx:id="Lbtn6" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="6" />
+                                    <Button fx:id="Lbtn5" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="5" />
+                                    <Button fx:id="Lbtn4" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="4" />
+                                    <Button fx:id="Lbtn3" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="3" />
+                                    <Button fx:id="Lbtn2" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="2" />
+                                    <Button fx:id="Lbtn1" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="1" />
+                                    <Button fx:id="Lbtn1_1" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="1" />
+                                    <Button fx:id="Lbtn2_2" layoutX="20.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="2" />
+                                    <Button fx:id="Lbtn3_3" layoutX="76.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="3" />
+                                    <Button fx:id="Lbtn4_4" layoutX="132.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="4" />
+                                    <Button fx:id="Lbtn5_5" layoutX="160.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="5" />
+                                    <Button fx:id="Lbtn6_6" layoutX="188.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="6" />
+                                    <Button fx:id="Lbtn7_7" layoutX="188.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="7" />
+                                    <Button fx:id="Lbtn8_8" layoutX="216.0" layoutY="10.0" maxWidth="28.0" mnemonicParsing="false" onMouseClicked="#LonBtn" prefHeight="30.0" prefWidth="28.0" styleClass="btn" text="8" />
                                  </children>
                               </HBox>
                            </children>
@@ -150,13 +123,13 @@
                   <HBox prefHeight="46.0" prefWidth="234.0" spacing="20.0">
                      <children>
                         <Label alignment="BOTTOM_LEFT" prefHeight="34.0" prefWidth="136.0" styleClass="lblSupp" text="Extra charges:" />
-                        <TextField maxHeight="40.0" prefHeight="23.0" prefWidth="118.0" styleClass="text-field1" />
+                        <TextField fx:id="extraChar" maxHeight="40.0" prefHeight="23.0" prefWidth="118.0" styleClass="text-field1" />
                      </children>
                   </HBox>
                   <HBox layoutX="10.0" layoutY="10.0" prefHeight="46.0" prefWidth="234.0" spacing="20.0">
                      <children>
                         <Label alignment="BOTTOM_LEFT" prefHeight="34.0" prefWidth="136.0" styleClass="lblSupp" text="Total Charges:" />
-                        <TextField maxHeight="40.0" prefHeight="23.0" prefWidth="118.0" styleClass="text-field1" />
+                        <TextField fx:id="TotalC" maxHeight="40.0" prefHeight="23.0" prefWidth="118.0" styleClass="text-field1" />
                      </children>
                   </HBox>
                </children>
@@ -166,26 +139,26 @@
                   <HBox prefHeight="41.0" prefWidth="303.0" spacing="20.0">
                      <children>
                         <Label alignment="BOTTOM_LEFT" prefHeight="34.0" prefWidth="152.0" styleClass="lblSupp" text="Trial date " />
-                        <DatePicker prefHeight="40.0" prefWidth="217.0" />
+                        <DatePicker fx:id="TrialD" prefHeight="40.0" prefWidth="217.0" />
                      </children>
                   </HBox>
                   <HBox layoutX="10.0" layoutY="10.0" prefHeight="41.0" prefWidth="303.0" spacing="20.0">
                      <children>
                         <Label alignment="BOTTOM_LEFT" prefHeight="34.0" prefWidth="164.0" styleClass="lblSupp" text="Finished date" />
-                        <DatePicker prefHeight="40.0" prefWidth="225.0" />
+                        <DatePicker fx:id="FinishedD" prefHeight="40.0" prefWidth="225.0" />
                      </children>
                   </HBox>
                </children>
             </VBox>
             <HBox layoutX="14.0" layoutY="610.0" prefHeight="52.0" prefWidth="283.0" spacing="20.0">
                <children>
-                  <Button mnemonicParsing="false" text="New Entry">
+                  <Button mnemonicParsing="false" onAction="#newEntry" text="New Entry">
                      <styleClass>
                         <String fx:value="btn2" />
                         <String fx:value="mainbtn" />
                      </styleClass>
                   </Button>
-                  <Button mnemonicParsing="false" styleClass="otherbtn" text="cancel" />
+                  <Button mnemonicParsing="false" onAction="#cancel" styleClass="otherbtn" text="cancel" />
                </children>
             </HBox>
          </children>
