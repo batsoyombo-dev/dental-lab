@@ -14,7 +14,7 @@
                 <URL value="@../../css/screens/daily_expenses_screen_layout.css" />
             </stylesheets>
             <top>
-                <HBox spacing="600" styleClass="borderedBox" >
+                <HBox spacing="1250" styleClass="borderedBox"  style="-fx-border-style: solid; -fx-border-width: 0 0 2 0;" BorderPane.alignment="CENTER">
                     <Label styleClass="topLabel" text="Daily Expenses" />
                     <VBox spacing="10" styleClass="header-text">
                         <Label text="Welcome: Root" />
@@ -24,7 +24,7 @@
             </top>
             <center>
                 <VBox spacing="10">
-
+<VBox minHeight="40" maxHeight="40"></VBox>
 
                <HBox spacing="20" prefWidth="900" styleClass="borderedBox">
                    <LegendBorder labelBackgroundColor="#fff" labelTitle="Make Expenses">
@@ -32,18 +32,18 @@
 
                            <HBox >
                                <VBox spacing="35" prefWidth="180">
-                                   <Label text="Date: "/>
-                                   <Label text="Amount: "/>
-                                   <Label text="Paid To: "/>
-                                   <Label text="By: "/>
-                                   <Label text="Description: "/>
-                                   <Label text="Comment: "/>
+                                   <Label text="Date: " styleClass="topLabel"/>
+                                   <Label text="Amount: " styleClass="topLabel"/>
+                                   <Label text="Paid To: " styleClass="topLabel"/>
+                                   <Label text="By: " styleClass="topLabel"/>
+                                   <Label text="Description: " styleClass="topLabel"/>
+                                   <Label text="Comment: " styleClass="topLabel"/>
                                </VBox>
-                               <VBox spacing="8">
+                               <VBox spacing="60">
                                    <DatePicker fx:id="dp_expenseDateField" />
                                    <TextField fx:id="inp_expenseAmountField" />
                                    <TextField fx:id="inp_expensePaidToField" />
-                                   <ComboBox value="Cash" fx:id="cb_expensePaymentMethodField" >
+                                   <ComboBox value="Cash" fx:id="cb_expensePaymentMethodField" styleClass="choiceBoxStyle" >
                                        <items>
                                            <FXCollections fx:factory="observableArrayList">
                                                <String fx:value="Cash"/>
@@ -61,16 +61,16 @@
                    <LegendBorder labelBackgroundColor="#fff" labelTitle="Search Expenses">
                        <VBox spacing="10">
                            <HBox spacing="8.0" >
-                               <Label text="From:" prefWidth="70" minWidth="70" maxWidth="70"/>
+                               <Label text="From:" prefWidth="70" minWidth="70" maxWidth="70" styleClass="topLabel"/>
                                <DatePicker/>
-                               <Label text="To:" prefWidth="70"  minWidth="70" maxWidth="70"/>
+                               <Label text="To:" prefWidth="70"  minWidth="70" maxWidth="70" styleClass="topLabel"/>
                                <DatePicker/>
-                               <Button text="Search" prefWidth="70"  minWidth="70" maxWidth="70"/>
+                               <Button text="Search"  styleClass="btn"/>
                            </HBox>
-                           <TableView styleClass="table" fx:id="tv_expensesList">
+                           <TableView styleClass="table " fx:id="tv_expensesList">
                                <columnResizePolicy><TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/></columnResizePolicy>
                                <columns>
-                                   <TableColumn text="ID" fx:id="tc_expenseIdColumn" />
+                                   <TableColumn text="ID" fx:id="tc_expenseIdColumn"  />
                                    <TableColumn text="Date" fx:id="tc_expenseDateColumn" />
                                    <TableColumn text="Paid To" fx:id="tc_expensePaidToColumn" />
                                    <TableColumn text="Description" fx:id="tc_expenseDescColumn" />
@@ -80,7 +80,7 @@
                                </columns>
                            </TableView>
                            <HBox>
-                               <Label text="Total Amount Listed: "/>
+                               <Label text="Total Amount Listed: " styleClass="topLabel"/>
                                <TextField/>
                            </HBox>
                        </VBox>
