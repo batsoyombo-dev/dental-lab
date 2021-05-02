@@ -21,7 +21,6 @@
     </Menu>
     <Menu text="Lab Profile">
         <MenuItem text="Add Lab Profile" onAction="#handleNavigation" id="add-lab-profile"/>
-        <MenuItem text="Add User" onAction="#handleNavigation" id="add-user"/>
     </Menu>
     <Menu text="Records">
         <MenuItem text="Show Records" onAction="#handleNavigation" id="records" />

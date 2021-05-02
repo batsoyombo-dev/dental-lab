@@ -15,12 +15,9 @@
         </stylesheets>
         <top>
             <HBox styleClass="header-container">
-                <Label styleClass="topLabel" text="Search Entries" />
+                <Label styleClass="topLabel" text="Generate Invoice" />
             </HBox>
         </top>
-        <BorderPane.margin>
-            <Insets/>
-        </BorderPane.margin>
         <center>
             <VBox style="-fx-padding: 30px 0" spacing="12">
                 <HBox spacing="20">

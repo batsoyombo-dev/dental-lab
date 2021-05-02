@@ -9,7 +9,7 @@
 <?import javafx.scene.input.KeyCodeCombination?>
 <BorderPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            stylesheets="@../css/home_layout.css, @../css/global.css">
+            stylesheets="@../css/home_layout.css, @../css/global.css" style="-fx-background-color: #fff;">
 
     <top>
 

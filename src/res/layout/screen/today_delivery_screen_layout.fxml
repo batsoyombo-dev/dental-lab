@@ -17,14 +17,9 @@
       <URL value="@../../css/screens/today_delivery_screen_layout.css" />
    </stylesheets>
    <top>
-      <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="200.0" style="-fx-border-style: solid; -fx-border-width: 0 0 2 0;" BorderPane.alignment="CENTER">
-         <children>
-            <Label styleClass="topLabel" text="Reminders" />
-         </children>
-         <padding>
-            <Insets left="50.0" />
-         </padding>
-      </HBox>
+       <HBox styleClass="header-container">
+           <Label styleClass="topLabel" text="Today's Delivery" />
+       </HBox>
    </top>
    <center>
       <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
@@ -50,7 +45,7 @@
                   </HBox>
                </children>
             </VBox>
-            <TableView fx:id="myTable" layoutX="31.0" layoutY="169.0" prefHeight="635.0" prefWidth="952.0">
+            <TableView fx:id="myTable" layoutX="31.0" layoutY="169.0" prefHeight="400.0" prefWidth="952.0">
               <columns>
                 <TableColumn fx:id="InwardNo" prefWidth="75.0" text="Inward No " />
                 <TableColumn fx:id="PatientName" prefWidth="75.0" text="Patient_name" />

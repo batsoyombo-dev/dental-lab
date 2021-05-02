@@ -3,7 +3,12 @@
     -fx-max-width: infinity;
     -fx-background-color: white;
 }
-.header-text{
+.header-container {
+    -fx-padding: 0px 0px 30px 0px;
+    -fx-border-width: 0 0 1px 0;
+    -fx-border-color: #333;
+}
+.header-text {
     -fx-font-size: 18.0;
 }
 .borderedBoxx{
@@ -26,10 +31,6 @@
     -fx-font-size: 28;
 }
 .nothing{
-}
-.topLabel{
-    -fx-padding: 0px 0px 30px 0px;
-    -fx-font-size: 28;
 }
 .gridDocProf{
     -fx-padding: 30px;

@@ -24,11 +24,9 @@
         <VBox styleClass="nav-container">
             <Button text="Register" onMouseClicked="#handleNavigation" id="register" styleClass="btn" />
             <Button text="Search Entries" onMouseClicked="#handleNavigation" id="search-entries" styleClass="btn" />
-            <Button text="Analysis" onMouseClicked="#handleNavigation" id="analysis" styleClass="btn" />
             <Button text="Generate Invoice" onMouseClicked="#handleNavigation" id="gen-invoice" styleClass="btn" />
             <Button text="Daily Expenses" onMouseClicked="#handleNavigation" id="daily-expenses" styleClass="btn" />
             <Button text="Today Delivery" onMouseClicked="#handleNavigation" id="today-delivery" styleClass="btn" />
-            <Button text="Ledger Account" onMouseClicked="#handleNavigation" id="ledger-account" styleClass="btn" />
             <Button text="Exit" onMouseClicked="#handleNavigation" id="exit" styleClass="btn" />
         </VBox>
     </center>

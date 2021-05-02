@@ -140,7 +140,7 @@
                   <HBox layoutX="10.0" layoutY="10.0" prefHeight="41.0" prefWidth="303.0" spacing="20.0">
                      <children>
                         <Label alignment="BOTTOM_LEFT" prefHeight="34.0" prefWidth="164.0" styleClass="lblSupp" text="Finished date" />
-                        <DatePicker fx:id="FinishedD" prefHeight="40.0" prefWidth="225.0" />
+                        <DatePicker fx:id="finishedD" prefHeight="40.0" prefWidth="225.0" />
                      </children>
                   </HBox>
                </children>

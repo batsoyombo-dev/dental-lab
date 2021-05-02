@@ -80,7 +80,7 @@ public class TodayDeliveryScreenController implements Initializable, Navigateabl
         this.Teeth.setCellValueFactory(new PropertyValueFactory<>("teeth"));
 
 
-        registrationsList = crudDAO.search("finished_date",date);
+        registrationsList = crudDAO.search("finished_date", LocalDate.now());
         myTable.getItems().addAll(registrationsList);
     }
 

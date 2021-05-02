@@ -55,10 +55,6 @@ public class HomeController implements Initializable {
                 this.navigateable = new SearchEntriesScreenController();
                 path = "/screen/search_entries_screen_layout.fxml";
             }
-            case "analysis" -> {
-                this.navigateable = new AnalysisScreenController();
-                path = "/screen/analysis_screen_layout.fxml";
-            }
             case "gen-invoice" -> {
                 this.navigateable = new GenerateInvoiceScreenController();
                 path = "/screen/generate_invoice_screen_layout.fxml";
@@ -70,10 +66,6 @@ public class HomeController implements Initializable {
             case "today-delivery" -> {
                 this.navigateable = new TodayDeliveryScreenController();
                 path = "/screen/today_delivery_screen_layout.fxml";
-            }
-            case "ledger-account" -> {
-                this.navigateable = new LedgerAccountScreenController();
-                path = "/screen/ledger_account_screen_layout.fxml";
             }
             case "doctor-profile" -> {
                 this.navigateable = new DoctorProfileScreenController();
@@ -94,10 +86,6 @@ public class HomeController implements Initializable {
             case "add-lab-profile" -> {
                 this.navigateable = new AddLabProfileScreenController();
                 path = "/screen/add_lab_profile_screen_layout.fxml";
-            }
-            case "add-user" -> {
-                this.navigateable = new AddUserScreenController();
-                path = "/screen/add_user_screen_layout.fxml";
             }
             case "records" -> {
                 this.navigateable = new RecordScreenController();

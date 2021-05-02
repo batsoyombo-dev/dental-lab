@@ -14,32 +14,25 @@
                 <URL value="@../../css/screens/daily_expenses_screen_layout.css" />
             </stylesheets>
             <top>
-                <HBox spacing="1250" styleClass="borderedBox"  style="-fx-border-style: solid; -fx-border-width: 0 0 2 0;" BorderPane.alignment="CENTER">
+                <HBox styleClass="header-container">
                     <Label styleClass="topLabel" text="Daily Expenses" />
-                    <VBox spacing="10" styleClass="header-text">
-                        <Label text="Welcome: Root" />
-                        <Label text="Today: 2021.12.12"/>
-                    </VBox>
                 </HBox>
             </top>
             <center>
                 <VBox spacing="10">
-<VBox minHeight="40" maxHeight="40"></VBox>
-
-               <HBox spacing="20" prefWidth="900" styleClass="borderedBox">
+               <HBox spacing="20" styleClass="borderedBox">
                    <LegendBorder labelBackgroundColor="#fff" labelTitle="Make Expenses">
                        <VBox>
-
-                           <HBox >
-                               <VBox spacing="35" prefWidth="180">
-                                   <Label text="Date: " styleClass="topLabel"/>
-                                   <Label text="Amount: " styleClass="topLabel"/>
-                                   <Label text="Paid To: " styleClass="topLabel"/>
-                                   <Label text="By: " styleClass="topLabel"/>
-                                   <Label text="Description: " styleClass="topLabel"/>
-                                   <Label text="Comment: " styleClass="topLabel"/>
+                           <HBox>
+                               <VBox spacing="55" prefWidth="180">
+                                   <Label style="-fx-font-size: 20;" text="Date: "/>
+                                   <Label style="-fx-font-size: 20;" text="Amount: "/>
+                                   <Label style="-fx-font-size: 20;" text="Paid To: "/>
+                                   <Label style="-fx-font-size: 20;" text="By: "/>
+                                   <Label style="-fx-font-size: 20;" text="Description: "/>
+                                   <Label style="-fx-font-size: 20;" text="Comment: "/>
                                </VBox>
-                               <VBox spacing="60">
+                               <VBox spacing="40">
                                    <DatePicker fx:id="dp_expenseDateField" />
                                    <TextField fx:id="inp_expenseAmountField" />
                                    <TextField fx:id="inp_expensePaidToField" />
@@ -61,9 +54,9 @@
                    <LegendBorder labelBackgroundColor="#fff" labelTitle="Search Expenses">
                        <VBox spacing="10">
                            <HBox spacing="8.0" >
-                               <Label text="From:" prefWidth="70" minWidth="70" maxWidth="70" styleClass="topLabel"/>
+                               <Label text="From:" prefWidth="70" minWidth="70" maxWidth="70" style="-fx-font-size: 20;"/>
                                <DatePicker/>
-                               <Label text="To:" prefWidth="70"  minWidth="70" maxWidth="70" styleClass="topLabel"/>
+                               <Label text="To:" prefWidth="70"  minWidth="70" maxWidth="70" style="-fx-font-size: 20;"/>
                                <DatePicker/>
                                <Button text="Search"  styleClass="btn"/>
                            </HBox>
@@ -80,7 +73,7 @@
                                </columns>
                            </TableView>
                            <HBox>
-                               <Label text="Total Amount Listed: " styleClass="topLabel"/>
+                               <Label text="Total Amount Listed: " style="-fx-font-size: 20;"/>
                                <TextField/>
                            </HBox>
                        </VBox>
