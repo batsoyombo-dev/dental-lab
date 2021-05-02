@@ -23,26 +23,6 @@ import javafx.scene.input.MouseEvent;
 
 public class RegisterScreenController implements Initializable, Navigateable {
 
-
-    private CrudDAO<Registration> crudDAO;
-    private CrudDAO<Doctor> crudDAODoctor;
-    private CrudDAO<WorkType> crudDAOWorkType;
-    private List<Doctor> doctorList;
-    private List<WorkType> workTypes;
-
-    private Doctor doctor = new Doctor();
-    private WorkType workType = new WorkType();
-
-    private String inwardNo ;
-    private String patient_name ;
-    private String date ;
-    private String trial_date ;
-    private String finished_date ;
-    private float charges ;
-    private String doctor_id ;
-    private String work_type_id ;
-    private List<String> chosenTeeth;
-    private List<Button> buttons;
     @FXML
     private ComboBox<String> choiceDoctor;
 
@@ -57,99 +37,6 @@ public class RegisterScreenController implements Initializable, Navigateable {
 
     @FXML
     private DatePicker dateP;
-    @FXML
-    private Button UL8;
-
-
-    @FXML
-    private Button UL7;
-
-    @FXML
-    private Button UL6;
-
-    @FXML
-    private Button UL5;
-
-    @FXML
-    private Button UL4;
-
-    @FXML
-    private Button UL3;
-
-    @FXML
-    private Button UL2;
-
-    @FXML
-    private Button UL1;
-
-    @FXML
-    private Button UR1;
-
-    @FXML
-    private Button UR2;
-
-    @FXML
-    private Button UR3;
-
-    @FXML
-    private Button UR4;
-
-    @FXML
-    private Button UR5;
-
-    @FXML
-    private Button UR6;
-
-    @FXML
-    private Button UR7;
-
-    @FXML
-    private Button UR8;
-
-    @FXML
-    private Button LL8;
-
-    @FXML
-    private Button LL7;
-
-    @FXML
-    private Button LL6;
-
-    @FXML
-    private Button LL5;
-
-    @FXML
-    private Button LL4;
-
-    @FXML
-    private Button LL3;
-
-    @FXML
-    private Button LL2;
-
-    @FXML
-    private Button LL1;
-
-    @FXML
-    private Button LR1;
-
-    @FXML
-    private Button LR2;
-
-    @FXML
-    private Button LR3;
-
-    @FXML
-    private Button LR4;
-
-    @FXML
-    private Button LR5;
-
-    @FXML
-    private Button LR6;
-
-    @FXML
-    private Button LR7;
 
     @FXML
     private Button LR8;
@@ -164,9 +51,26 @@ public class RegisterScreenController implements Initializable, Navigateable {
     private DatePicker TrialD;
 
     @FXML
-    private DatePicker FinishedD;
+    private DatePicker finishedD;
 
     ObservableList<String> teethList = FXCollections.observableArrayList();
+    private CrudDAO<Registration> crudDAO;
+    private CrudDAO<Doctor> crudDAODoctor;
+    private CrudDAO<WorkType> crudDAOWorkType;
+    private List<Doctor> doctorList;
+    private List<WorkType> workTypes;
+    private Doctor doctor = new Doctor();
+    private WorkType workType = new WorkType();
+    private String inwardNo ;
+    private String patient_name ;
+    private String date ;
+    private String trial_date ;
+    private String finished_date ;
+    private float charges ;
+    private String doctor_id ;
+    private String work_type_id ;
+    private List<String> chosenTeeth;
+    private List<Button> buttons;
 
     public RegisterScreenController()
     {
@@ -230,9 +134,6 @@ public class RegisterScreenController implements Initializable, Navigateable {
         }
     }
 
-
-
-
     @FXML
     void cancel()
     {
@@ -245,7 +146,7 @@ public class RegisterScreenController implements Initializable, Navigateable {
         }
         this.chosenTeeth.clear();
         JobNo.clear();
-        FinishedD.getEditor().clear();
+        finishedD.getEditor().clear();
         dateP.getEditor().clear();
         patientN.clear();
         extraChar.clear();
@@ -264,15 +165,11 @@ public class RegisterScreenController implements Initializable, Navigateable {
             if(crudDAO.create(registration))
             {
                 Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-                alert.setTitle("Амжилтай");
-                alert.setHeaderText("Амжилтай боллоо :D");
+                alert.setTitle("Success!");
+                alert.setHeaderText("Successfully register!");
                 Optional<ButtonType> result = alert.showAndWait();
-                if (result.isPresent() && result.get() == ButtonType.OK ||  result.get() == ButtonType.CANCEL)
-                {
-//                    JobNo.clear();
-                    FinishedD.getEditor().clear();
-//                    dateP.getEditor().clear();
-//                    patientN.clear();
+                if (result.isPresent() && result.get() == ButtonType.OK ||  result.get() == ButtonType.CANCEL) {
+                    finishedD.getEditor().clear();
                     extraChar.clear();
                     TotalC.clear();
                     TrialD.getEditor().clear();
@@ -281,8 +178,8 @@ public class RegisterScreenController implements Initializable, Navigateable {
             else
             {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
-                alert.setTitle("Алдаа ");
-                alert.setHeaderText("Алдаа гарлаа ");
+                alert.setTitle("Error!");
+                alert.setHeaderText("Something went wrong!");
             }
         }
 
@@ -304,14 +201,12 @@ public class RegisterScreenController implements Initializable, Navigateable {
     }
     boolean check()
     {
-        if (
-                JobNo.getText().trim().isEmpty()||
-                dateP.getEditor().getText().trim().isEmpty()||
-                patientN.getText().trim().isEmpty()||
-                TotalC.getText().trim().isEmpty()||
-                TrialD.getEditor().getText().trim().isEmpty()||
-                FinishedD.getEditor().getText().trim().isEmpty())
-        {
+        if (JobNo.getText().trim().isEmpty()||
+            dateP.getEditor().getText().trim().isEmpty()||
+            patientN.getText().trim().isEmpty()||
+            TotalC.getText().trim().isEmpty()||
+            TrialD.getEditor().getText().trim().isEmpty()||
+            finishedD.getEditor().getText().trim().isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setContentText("Aldaa garlaa!");
             alert.show();
