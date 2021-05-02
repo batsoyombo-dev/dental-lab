@@ -10,6 +10,7 @@ import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -27,7 +28,7 @@ public class SidebarController implements Initializable {
     }
 
     @FXML
-    public void handleNavigation(MouseEvent e) throws IOException {
+    public void handleNavigation(MouseEvent e) throws IOException, URISyntaxException {
         homeController.inflateScreen(((Button)(e.getSource())).getId());
     }
 }

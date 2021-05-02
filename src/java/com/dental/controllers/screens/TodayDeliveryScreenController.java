@@ -22,16 +22,6 @@ import java.util.ResourceBundle;
 
 public class TodayDeliveryScreenController implements Initializable, Navigateable
 {
-    String date;
-    SimpleDateFormat simpleDateFormat;
-    public TodayDeliveryScreenController()
-    {
-        String pattern = "yyyy-MM-dd";
-        simpleDateFormat = new SimpleDateFormat(pattern);
-         date = simpleDateFormat.format(new Date());
-        this.crudDAO = new CrudDAO<>(Registration.class);
-    }
-
     @FXML
     private DatePicker datePicker;
 
@@ -67,10 +57,18 @@ public class TodayDeliveryScreenController implements Initializable, Navigateabl
     private List<Registration> registrationsList;
     private CrudDAO<Registration> crudDAO;
 
+    String date;
+    SimpleDateFormat simpleDateFormat;
+
+    public TodayDeliveryScreenController()
+    {
+        this.crudDAO = new CrudDAO<>(Registration.class);
+    }
+
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle)
     {
-        datePicker.setValue(LOCAL_DATE(date));
+        datePicker.setValue(LocalDate.now());
         this.InwardNo.setCellValueFactory(new PropertyValueFactory<>("id"));
         this.PatientName.setCellValueFactory(new PropertyValueFactory<>("patientName"));
         this.DateP.setCellValueFactory(new PropertyValueFactory<>("date"));
@@ -84,12 +82,6 @@ public class TodayDeliveryScreenController implements Initializable, Navigateabl
 
         registrationsList = crudDAO.search("finished_date",date);
         myTable.getItems().addAll(registrationsList);
-    }
-
-    private LocalDate LOCAL_DATE(String s)
-    {
-        LocalDate localDate = LocalDate.parse(s);
-        return localDate;
     }
 
     @FXML

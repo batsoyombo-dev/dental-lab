@@ -11,6 +11,7 @@ import javafx.scene.control.MenuBar;
 import javafx.scene.control.MenuItem;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -28,7 +29,7 @@ public class MenubarController implements Initializable {
     }
 
     @FXML
-    public void handleNavigation(ActionEvent e) throws IOException {
+    public void handleNavigation(ActionEvent e) throws IOException, URISyntaxException {
         this.homeController.inflateScreen(((MenuItem)(e.getSource())).getId());
     }
 
