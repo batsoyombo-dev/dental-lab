@@ -78,7 +78,9 @@ public class SearchEntriesScreenController implements Initializable, Navigateabl
         thread.start();
 
         this.tv_searchResult.getSelectionModel().selectedItemProperty().addListener((a, b, c) -> {
+            this.clearFields();
             this.chosenRegistration = this.tv_searchResult.getSelectionModel().getSelectedItem();
+            this.chosenTeeth = new ArrayList<>();
             this.inflateFields();
         });
     }
