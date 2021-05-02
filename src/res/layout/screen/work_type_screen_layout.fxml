@@ -20,22 +20,22 @@
                         <HBox alignment="CENTER_LEFT" prefHeight="61.0" prefWidth="571.0" spacing="10.0">
                             <children>
                                 <Label styleClass="lblSupp" text="Work Type:" />
-                                <TextField prefHeight="33.0" prefWidth="177.0" />
+                                <TextField fx:id="WorkTypeText" prefHeight="33.0" prefWidth="177.0" />
                                 <Label styleClass="lblSupp" text="Charge:" />
-                                <TextField prefHeight="33.0" prefWidth="165.0" />
+                                <TextField fx:id="ChargeText" prefHeight="33.0" prefWidth="165.0" />
                             </children>
                         </HBox>
                         <HBox alignment="CENTER_LEFT" layoutX="78.0" layoutY="75.0" prefHeight="61.0" prefWidth="441.0" spacing="10.0">
                             <children>
-                                <Button mnemonicParsing="false" prefWidth="102.0" text="Save">
+                                <Button mnemonicParsing="false" onAction="#handleClickSave" prefWidth="102.0" text="Add">
                                     <styleClass>
                                         <String fx:value="otherbtn" />
                                         <String fx:value="mainbtn" />
                                     </styleClass>
                                 </Button>
-                                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="otherbtn" text="Update" />
-                                <Button layoutX="64.0" layoutY="10.0" mnemonicParsing="false" styleClass="otherbtn" text="Delete" />
-                                <Button layoutX="118.0" layoutY="10.0" mnemonicParsing="false" styleClass="otherbtn" text="Cancel" />
+                                <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleClickUpdate" styleClass="otherbtn" text="Update" />
+                                <Button layoutX="64.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleClickDelete" styleClass="otherbtn" text="Delete" />
+                                <Button layoutX="118.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleClickCancel" styleClass="otherbtn" text="Cancel" />
                             </children>
                             <padding>
                                 <Insets left="10.0" />
@@ -48,11 +48,11 @@
         </StackPane>
         <StackPane layoutX="10.0" layoutY="206.0" prefHeight="589.0" prefWidth="582.0" style="-fx-border-color: black; -fx-border-radius: 5;">
             <children>
-                <TableView prefHeight="200.0" prefWidth="200.0">
+                <TableView fx:id="WorkTypeWork" prefHeight="200.0" prefWidth="200.0">
                     <columns>
-                        <TableColumn prefWidth="203.0" text="Sr No." />
-                        <TableColumn minWidth="8.33331298828125" prefWidth="175.0" text="Work Type" />
-                        <TableColumn minWidth="0.0" prefWidth="201.0" text="Charge" />
+                        <TableColumn fx:id="srNo" prefWidth="203.0" text="Sr No." />
+                        <TableColumn fx:id="WorkType" minWidth="8.33331298828125" prefWidth="175.0" text="Work Type" />
+                        <TableColumn fx:id="Charge" minWidth="0.0" prefWidth="201.0" text="Charge" />
                     </columns>
                 </TableView>
                 <Label style="-fx-background-color: white;" styleClass="lblSupp" text="View Work type" translateX="-200.0" translateY="-305.0" />
