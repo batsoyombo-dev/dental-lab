@@ -9,6 +9,7 @@ import javafx.application.Platform;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -33,6 +34,7 @@ public class HomeController implements Initializable {
         stage.setScene(scene);
         stage.setTitle("Dental Lab");
         stage.setMaximized(true);
+        stage.getIcons().add(new Image("/images/tooth128.png"));
         stage.show();
     }
 
