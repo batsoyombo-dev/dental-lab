@@ -16,6 +16,7 @@ import java.util.ResourceBundle;
 import java.util.UUID;
 
 public class AddLabProfileScreenController implements Initializable, Navigateable {
+
     @FXML
     private TextField labPhoneTxt;
 
