@@ -12,7 +12,10 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
+import java.awt.*;
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -38,7 +41,7 @@ public class HomeController implements Initializable {
 
     }
 
-    public void inflateScreen(String screen) throws IOException {
+    public void inflateScreen(String screen) throws IOException, URISyntaxException {
         String path;
         if (this.currentScreen == null || !this.currentScreen.equals(screen))
             this.currentScreen = screen;
@@ -101,8 +104,8 @@ public class HomeController implements Initializable {
                 path = "/screen/record_screen_layout.fxml";
             }
             case "about" -> {
-                // TO-DO / HyperLink to Github
-                System.out.println("about");
+                URI uri = new URI("https://github.com/batsoyombo-dev/dental-lab");
+                Desktop.getDesktop().browse(uri);
                 return;
             }
             case "exit" -> {
