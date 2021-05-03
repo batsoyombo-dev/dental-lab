@@ -20,7 +20,10 @@
     </left>
 
     <center>
-<!--        Main Section-->
+        <VBox alignment="CENTER">
+            <Label style="-fx-font-size: 72px;" text="Welcome to Dental Care" />
+            <Label style="-fx-font-size: 48px;" text="Start your Management" />
+        </VBox>
     </center>
 
 </BorderPane>
